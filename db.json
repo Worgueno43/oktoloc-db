@@ -1,11 +1,25 @@
 {
     "accomodations": [
         {
+            "@type": "Accomodation",
             "id": 1,
             "title": "Immeuble Rue Saint Jacques",
             "city": "Le Puy-en-velay",
             "accomodationNumber": 4,
-            "currentUsed": 3
+            "currentUsed": 3,
+            "accomodationDetails": [
+                {
+                    "@type": "AccomodationDetails",
+                    "@id": "accomodationDetails/1"
+                }
+            ]
+        }
+    ],
+    "accomodationDetails": [
+        {
+            "@type": "AccomodationDetails",
+            "id": 1,
+            "adress": "test"
         }
     ]
 }
