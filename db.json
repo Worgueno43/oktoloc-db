@@ -1,0 +1,11 @@
+{
+    "accomodations": [
+        {
+            "id": 1,
+            "title": "Immeuble Rue Saint Jacques",
+            "city": "Le Puy-en-velay",
+            "accomodationNumber": 4,
+            "currentUsed": 3
+        }
+    ]
+}
