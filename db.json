@@ -1,25 +1,167 @@
 {
-    "accomodations": [
+    "roles": [
         {
-            "@type": "Accomodation",
             "id": 1,
-            "title": "Immeuble Rue Saint Jacques",
-            "city": "Le Puy-en-velay",
-            "accomodationNumber": 4,
-            "currentUsed": 3,
-            "accomodationDetails": [
-                {
-                    "@type": "AccomodationDetails",
-                    "@id": "accomodationDetails/1"
-                }
+            "name": "Administrateur"
+        },
+        {
+            "id": 2,
+            "name": "Utilisateur"
+        }
+    ],
+    "types": [
+        {
+            "id": 1,
+            "label": "Appartement"
+        },
+        {
+            "id": 2,
+            "label": "Maison"
+        },
+        {
+            "id": 3,
+            "label": "Garage"
+        },
+        {
+            "id": 4,
+            "label": "Commerce"
+        }
+    ],
+    "status": [
+        {
+            "id": 1,
+            "label": "Loué"
+        },
+        {
+            "id": 2,
+            "label": "Non loué"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "firstName": "John",
+            "email": "john.doe@gmail.com",
+            "phone": "0606060606",
+            "roleId": 2,
+            "groupsId": [
+                1,
+                2
             ]
         }
     ],
-    "accomodationDetails": [
+    "groups": [
         {
-            "@type": "AccomodationDetails",
             "id": 1,
-            "adress": "test"
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodationsId": [
+                1,
+                2
+            ]
+        }
+    ],
+    "accomodations": [
+        {
+            "id": 1,
+            "name": "Appartement de Jean",
+            "photo": "",
+            "address": "11 rue saint jean, 32159, Saint-Jean",
+            "etage": "2",
+            "loyer": 245,
+            "charges": 20,
+            "surface": 70,
+            "caution": 245,
+            "typeId": 1,
+            "statusId": 1,
+            "userId": 1,
+            "groupsId": 1,
+            "locataireId": 1
+        },
+        {
+            "id": 2,
+            "name": "Appartement de Janette",
+            "photo": "",
+            "address": "12 rue saint jean, 32159, Saint-Jean",
+            "etage": "4",
+            "loyer": 400,
+            "charges": 120,
+            "surface": 200,
+            "caution": 400,
+            "typeId": 1,
+            "statusId": 1,
+            "userId": 1,
+            "groupsId": 1,
+            "locataireId": 2
+        }
+    ],
+    "locataires": [
+        {
+            "id": 1,
+            "lastName": "Doe",
+            "firstName": "Jean",
+            "email": "jeandoe@hotmail.com",
+            "phone": "0707070707",
+            "enterDate": "12/09/2021",
+            "accomodationId": 1
+        },
+        {
+            "id": 1,
+            "lastName": "Doe",
+            "firstName": "Janette",
+            "email": "janettedoe@wanadoo.com",
+            "phone": "0707070707",
+            "enterDate": "09/12/2012",
+            "accomodationId": 2
+        }
+    ],
+    "rents": [
+        {
+            "id": 1,
+            "month": "Avril",
+            "paiementDate": "05/04/2022",
+            "initialDate": "05/04/2022",
+            "amount": 265,
+            "accomodationId": 1
+        },
+        {
+            "id": 2,
+            "month": "Avril",
+            "paiementDate": "15/04/2022",
+            "initialDate": "05/04/2022",
+            "amount": 520,
+            "accomodationId": 2
+        }
+    ],
+    "documents": [
+        {
+            "id": 1,
+            "name": "Document de test",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "uploadDate": "12/12/2021",
+            "archive": false,
+            "tagsIds": [
+                2,
+                4
+            ]
+        }
+    ],
+    "tags": [
+        {
+            "id": 1,
+            "label": "Bail"
+        },
+        {
+            "id": 2,
+            "label": "Facture"
+        },
+        {
+            "id": 3,
+            "label": "Quittance"
+        },
+        {
+            "id": 4,
+            "label": "Assurance"
         }
     ]
 }
