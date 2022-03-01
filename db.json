@@ -2,11 +2,11 @@
     "roles": [
         {
             "id": 1,
-            "name": "Administrateur"
+            "label": "Administrateur"
         },
         {
             "id": 2,
-            "name": "Utilisateur"
+            "label": "Utilisateur"
         }
     ],
     "types": [
