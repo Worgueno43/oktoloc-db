@@ -43,10 +43,50 @@
             "firstName": "John",
             "email": "john.doe@gmail.com",
             "phone": "0606060606",
-            "roleId": 2,
-            "groupsId": [
-                1,
-                2
+            "role": {
+                "id": 2,
+                "label": "Utilisateur"
+            },
+            "groups": [
+                {
+                    "id": 1,
+                    "name": "Le groupe de test",
+                    "city": "Saint-Jean",
+                    "accomodations": [
+                        {
+                            "id": 1,
+                            "name": "Appartement de Jean",
+                            "photo": "",
+                            "address": "11 rue saint jean, 32159, Saint-Jean",
+                            "etage": "2",
+                            "loyer": 245,
+                            "charges": 20,
+                            "surface": 70,
+                            "caution": 245,
+                            "typeId": 1,
+                            "statusId": 1,
+                            "userId": 1,
+                            "groupsId": 1,
+                            "locataireId": 1
+                        },
+                        {
+                            "id": 2,
+                            "name": "Appartement de Janette",
+                            "photo": "",
+                            "address": "12 rue saint jean, 32159, Saint-Jean",
+                            "etage": "4",
+                            "loyer": 400,
+                            "charges": 120,
+                            "surface": 200,
+                            "caution": 400,
+                            "typeId": 1,
+                            "statusId": 1,
+                            "userId": 1,
+                            "groupsId": 1,
+                            "locataireId": 2
+                        }
+                    ]
+                }
             ]
         }
     ],
@@ -55,9 +95,39 @@
             "id": 1,
             "name": "Le groupe de test",
             "city": "Saint-Jean",
-            "accomodationsId": [
-                1,
-                2
+            "accomodations": [
+                {
+                    "id": 1,
+                    "name": "Appartement de Jean",
+                    "photo": "",
+                    "address": "11 rue saint jean, 32159, Saint-Jean",
+                    "etage": "2",
+                    "loyer": 245,
+                    "charges": 20,
+                    "surface": 70,
+                    "caution": 245,
+                    "typeId": 1,
+                    "statusId": 1,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "locataireId": 1
+                },
+                {
+                    "id": 2,
+                    "name": "Appartement de Janette",
+                    "photo": "",
+                    "address": "12 rue saint jean, 32159, Saint-Jean",
+                    "etage": "4",
+                    "loyer": 400,
+                    "charges": 120,
+                    "surface": 200,
+                    "caution": 400,
+                    "typeId": 1,
+                    "statusId": 1,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "locataireId": 2
+                }
             ]
         }
     ],
@@ -72,11 +142,115 @@
             "charges": 20,
             "surface": 70,
             "caution": 245,
-            "typeId": 1,
-            "statusId": 1,
-            "userId": 1,
-            "groupsId": 1,
-            "locataireId": 1
+            "type": {
+                "id": 1,
+                "label": "Appartement"
+            },
+            "status": {
+                "id": 1,
+                "label": "Loué"
+            },
+            "user": {
+                "id": 1,
+                "firstName": "John",
+                "email": "john.doe@gmail.com",
+                "phone": "0606060606",
+                "role": {
+                    "id": 2,
+                    "label": "Utilisateur"
+                },
+                "groups": [
+                    {
+                        "id": 1,
+                        "name": "Le groupe de test",
+                        "city": "Saint-Jean",
+                        "accomodations": [
+                            {
+                                "id": 1,
+                                "name": "Appartement de Jean",
+                                "photo": "",
+                                "address": "11 rue saint jean, 32159, Saint-Jean",
+                                "etage": "2",
+                                "loyer": 245,
+                                "charges": 20,
+                                "surface": 70,
+                                "caution": 245,
+                                "typeId": 1,
+                                "statusId": 1,
+                                "userId": 1,
+                                "groupsId": 1,
+                                "locataireId": 1
+                            },
+                            {
+                                "id": 2,
+                                "name": "Appartement de Janette",
+                                "photo": "",
+                                "address": "12 rue saint jean, 32159, Saint-Jean",
+                                "etage": "4",
+                                "loyer": 400,
+                                "charges": 120,
+                                "surface": 200,
+                                "caution": 400,
+                                "typeId": 1,
+                                "statusId": 1,
+                                "userId": 1,
+                                "groupsId": 1,
+                                "locataireId": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            "groups": {
+                "id": 1,
+                "name": "Le groupe de test",
+                "city": "Saint-Jean",
+                "accomodations": [
+                    {
+                        "id": 1,
+                        "name": "Appartement de Jean",
+                        "photo": "",
+                        "address": "11 rue saint jean, 32159, Saint-Jean",
+                        "etage": "2",
+                        "loyer": 245,
+                        "charges": 20,
+                        "surface": 70,
+                        "caution": 245,
+                        "typeId": 1,
+                        "statusId": 1,
+                        "userId": 1,
+                        "groupsId": 1,
+                        "locataireId": 1
+                    },
+                    {
+                        "id": 2,
+                        "name": "Appartement de Janette",
+                        "photo": "",
+                        "address": "12 rue saint jean, 32159, Saint-Jean",
+                        "etage": "4",
+                        "loyer": 400,
+                        "charges": 120,
+                        "surface": 200,
+                        "caution": 400,
+                        "typeId": 1,
+                        "statusId": 1,
+                        "userId": 1,
+                        "groupsId": 1,
+                        "locataireId": 2
+                    }
+                ]
+            },
+            "locataire": {
+                "id": 1,
+                "lastName": "Doe",
+                "firstName": "Jean",
+                "email": "jeandoe@hotmail.com",
+                "phone": "0707070707",
+                "enterDate": "12/09/2021",
+                "accomodationsId": [
+                    1
+                ]
+            }
         },
         {
             "id": 2,
@@ -88,11 +262,115 @@
             "charges": 120,
             "surface": 200,
             "caution": 400,
-            "typeId": 1,
-            "statusId": 1,
-            "userId": 1,
-            "groupsId": 1,
-            "locataireId": 2
+            "type": {
+                "id": 1,
+                "label": "Appartement"
+            },
+            "status": {
+                "id": 1,
+                "label": "Loué"
+            },
+            "user": {
+                "id": 1,
+                "firstName": "John",
+                "email": "john.doe@gmail.com",
+                "phone": "0606060606",
+                "role": {
+                    "id": 2,
+                    "label": "Utilisateur"
+                },
+                "groups": [
+                    {
+                        "id": 1,
+                        "name": "Le groupe de test",
+                        "city": "Saint-Jean",
+                        "accomodations": [
+                            {
+                                "id": 1,
+                                "name": "Appartement de Jean",
+                                "photo": "",
+                                "address": "11 rue saint jean, 32159, Saint-Jean",
+                                "etage": "2",
+                                "loyer": 245,
+                                "charges": 20,
+                                "surface": 70,
+                                "caution": 245,
+                                "typeId": 1,
+                                "statusId": 1,
+                                "userId": 1,
+                                "groupsId": 1,
+                                "locataireId": 1
+                            },
+                            {
+                                "id": 2,
+                                "name": "Appartement de Janette",
+                                "photo": "",
+                                "address": "12 rue saint jean, 32159, Saint-Jean",
+                                "etage": "4",
+                                "loyer": 400,
+                                "charges": 120,
+                                "surface": 200,
+                                "caution": 400,
+                                "typeId": 1,
+                                "statusId": 1,
+                                "userId": 1,
+                                "groupsId": 1,
+                                "locataireId": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            "groups": {
+                "id": 1,
+                "name": "Le groupe de test",
+                "city": "Saint-Jean",
+                "accomodations": [
+                    {
+                        "id": 1,
+                        "name": "Appartement de Jean",
+                        "photo": "",
+                        "address": "11 rue saint jean, 32159, Saint-Jean",
+                        "etage": "2",
+                        "loyer": 245,
+                        "charges": 20,
+                        "surface": 70,
+                        "caution": 245,
+                        "typeId": 1,
+                        "statusId": 1,
+                        "userId": 1,
+                        "groupsId": 1,
+                        "locataireId": 1
+                    },
+                    {
+                        "id": 2,
+                        "name": "Appartement de Janette",
+                        "photo": "",
+                        "address": "12 rue saint jean, 32159, Saint-Jean",
+                        "etage": "4",
+                        "loyer": 400,
+                        "charges": 120,
+                        "surface": 200,
+                        "caution": 400,
+                        "typeId": 1,
+                        "statusId": 1,
+                        "userId": 1,
+                        "groupsId": 1,
+                        "locataireId": 2
+                    }
+                ]
+            },
+            "locataireId": {
+                "id": 2,
+                "lastName": "Doe",
+                "firstName": "Janette",
+                "email": "janettedoe@wanadoo.com",
+                "phone": "0707070707",
+                "enterDate": "09/12/2012",
+                "accomodationsId": [
+                    2
+                ]
+            }
         }
     ],
     "locataires": [
@@ -103,7 +381,9 @@
             "email": "jeandoe@hotmail.com",
             "phone": "0707070707",
             "enterDate": "12/09/2021",
-            "accomodationId": 1
+            "accomodationsId": [
+                1
+            ]
         },
         {
             "id": 2,
@@ -112,7 +392,9 @@
             "email": "janettedoe@wanadoo.com",
             "phone": "0707070707",
             "enterDate": "09/12/2012",
-            "accomodationId": 2
+            "accomodationsId": [
+                2
+            ]
         }
     ],
     "rents": [
@@ -140,9 +422,15 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
             "uploadDate": "12/12/2021",
             "archive": false,
-            "tagsIds": [
-                2,
-                4
+            "tags": [
+                {
+                    "id": 2,
+                    "label": "Facture"
+                },
+                {
+                    "id": 4,
+                    "label": "Assurance"
+                }
             ]
         }
     ],
