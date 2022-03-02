@@ -27,16 +27,6 @@
             "label": "Commerce"
         }
     ],
-    "status": [
-        {
-            "id": 1,
-            "label": "Loué"
-        },
-        {
-            "id": 2,
-            "label": "Non loué"
-        }
-    ],
     "users": [
         {
             "id": 1,
@@ -64,7 +54,7 @@
                             "surface": 70,
                             "caution": 245,
                             "typeId": 1,
-                            "statusId": 1,
+                            "status": true,
                             "userId": 1,
                             "groupsId": 1,
                             "locataireId": 1
@@ -80,7 +70,7 @@
                             "surface": 200,
                             "caution": 400,
                             "typeId": 1,
-                            "statusId": 1,
+                            "status": true,
                             "userId": 1,
                             "groupsId": 1,
                             "locataireId": 2
@@ -111,10 +101,7 @@
                         "id": 1,
                         "label": "Appartement"
                     },
-                    "status": {
-                        "id": 1,
-                        "label": "Loué"
-                    },
+                    "status": true,
                     "user": {
                         "id": 1,
                         "firstName": "John",
@@ -141,7 +128,7 @@
                                         "surface": 70,
                                         "caution": 245,
                                         "typeId": 1,
-                                        "statusId": 1,
+                                        "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
                                         "locataireId": 1
@@ -157,7 +144,7 @@
                                         "surface": 200,
                                         "caution": 400,
                                         "typeId": 1,
-                                        "statusId": 1,
+                                        "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
                                         "locataireId": 2
@@ -182,7 +169,7 @@
                                 "surface": 70,
                                 "caution": 245,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 1
@@ -198,7 +185,7 @@
                                 "surface": 200,
                                 "caution": 400,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 2
@@ -232,10 +219,7 @@
                         "id": 1,
                         "label": "Appartement"
                     },
-                    "status": {
-                        "id": 1,
-                        "label": "Loué"
-                    },
+                    "status": true,
                     "user": {
                         "id": 1,
                         "firstName": "John",
@@ -262,7 +246,7 @@
                                         "surface": 70,
                                         "caution": 245,
                                         "typeId": 1,
-                                        "statusId": 1,
+                                        "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
                                         "locataireId": 1
@@ -278,7 +262,7 @@
                                         "surface": 200,
                                         "caution": 400,
                                         "typeId": 1,
-                                        "statusId": 1,
+                                        "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
                                         "locataireId": 2
@@ -303,7 +287,7 @@
                                 "surface": 70,
                                 "caution": 245,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 1
@@ -319,7 +303,7 @@
                                 "surface": 200,
                                 "caution": 400,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 2
@@ -387,7 +371,7 @@
                                 "surface": 70,
                                 "caution": 245,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 1
@@ -403,7 +387,7 @@
                                 "surface": 200,
                                 "caution": 400,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 2
@@ -428,7 +412,7 @@
                         "surface": 70,
                         "caution": 245,
                         "typeId": 1,
-                        "statusId": 1,
+                        "status": true,
                         "userId": 1,
                         "groupsId": 1,
                         "locataireId": 1
@@ -444,7 +428,7 @@
                         "surface": 200,
                         "caution": 400,
                         "typeId": 1,
-                        "statusId": 1,
+                        "status": true,
                         "userId": 1,
                         "groupsId": 1,
                         "locataireId": 2
@@ -478,10 +462,7 @@
                 "id": 1,
                 "label": "Appartement"
             },
-            "status": {
-                "id": 1,
-                "label": "Loué"
-            },
+            "status": true,
             "user": {
                 "id": 1,
                 "firstName": "John",
@@ -508,7 +489,7 @@
                                 "surface": 70,
                                 "caution": 245,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 1
@@ -524,7 +505,7 @@
                                 "surface": 200,
                                 "caution": 400,
                                 "typeId": 1,
-                                "statusId": 1,
+                                "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
                                 "locataireId": 2
@@ -549,7 +530,7 @@
                         "surface": 70,
                         "caution": 245,
                         "typeId": 1,
-                        "statusId": 1,
+                        "status": true,
                         "userId": 1,
                         "groupsId": 1,
                         "locataireId": 1
@@ -565,7 +546,7 @@
                         "surface": 200,
                         "caution": 400,
                         "typeId": 1,
-                        "statusId": 1,
+                        "status": true,
                         "userId": 1,
                         "groupsId": 1,
                         "locataireId": 2
