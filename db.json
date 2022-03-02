@@ -101,7 +101,10 @@
                         "id": 1,
                         "label": "Appartement"
                     },
-                    "status": true,
+                    "status": {
+                        "id": 1,
+                        "label": "Loué"
+                    },
                     "user": {
                         "id": 1,
                         "firstName": "John",
@@ -161,7 +164,7 @@
                             {
                                 "id": 1,
                                 "name": "Appartement de Jean",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "11 rue saint jean, 32159, Saint-Jean",
                                 "etage": "2",
                                 "loyer": 245,
@@ -177,7 +180,7 @@
                             {
                                 "id": 2,
                                 "name": "Appartement de Janette",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "12 rue saint jean, 32159, Saint-Jean",
                                 "etage": "4",
                                 "loyer": 400,
@@ -202,7 +205,16 @@
                         "accomodationsId": [
                             1
                         ]
-                    }
+                    },
+                    "rents": [
+                        {
+                            "id": 1,
+                            "month": "Mars",
+                            "isPayed": true,
+                            "initialDate": "15/03/2022",
+                            "amount": 265
+                        }
+                    ]
                 },
                 {
                     "id": 2,
@@ -279,7 +291,7 @@
                             {
                                 "id": 1,
                                 "name": "Appartement de Jean",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "11 rue saint jean, 32159, Saint-Jean",
                                 "etage": "2",
                                 "loyer": 245,
@@ -295,7 +307,7 @@
                             {
                                 "id": 2,
                                 "name": "Appartement de Janette",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "12 rue saint jean, 32159, Saint-Jean",
                                 "etage": "4",
                                 "loyer": 400,
@@ -320,7 +332,16 @@
                         "accomodationsId": [
                             2
                         ]
-                    }
+                    },
+                    "rents": [
+                        {
+                            "id": 2,
+                            "month": "Mars",
+                            "isPayed": false,
+                            "initialDate": "15/03/2022",
+                            "amount": 265
+                        }
+                    ]
                 },
                 {
                     "id": 3,
@@ -428,13 +449,22 @@
                             }
                         ]
                     },
-                    "locataire": null
+                    "locataire": null,
+                    "rents": [
+                        {
+                            "id": 3,
+                            "month": "Mars",
+                            "isPayed": false,
+                            "initialDate": "02/03/2022",
+                            "amount": 265
+                        }
+                    ]
                 }
             ]
         },
         {
             "id": 2,
-            "name": "Immeuble Rue Raphaël",
+            "name": "Immeuble Rue Saint Raphaël",
             "city": "Le Puy-En-Velay",
             "accomodations": [
                 {
@@ -452,7 +482,10 @@
                         "id": 1,
                         "label": "Appartement"
                     },
-                    "status": true,
+                    "status": {
+                        "id": 1,
+                        "label": "Loué"
+                    },
                     "user": {
                         "id": 1,
                         "firstName": "John",
@@ -464,7 +497,7 @@
                         },
                         "groups": [
                             {
-                                "id": 2,
+                                "id": 1,
                                 "name": "Le groupe de test",
                                 "city": "Saint-Jean",
                                 "accomodations": [
@@ -505,14 +538,14 @@
                         ]
                     },
                     "groups": {
-                        "id": 2,
+                        "id": 1,
                         "name": "Le groupe de test",
                         "city": "Saint-Jean",
                         "accomodations": [
                             {
                                 "id": 1,
                                 "name": "Appartement de Jean",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "11 rue saint jean, 32159, Saint-Jean",
                                 "etage": "2",
                                 "loyer": 245,
@@ -528,7 +561,7 @@
                             {
                                 "id": 2,
                                 "name": "Appartement de Janette",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "12 rue saint jean, 32159, Saint-Jean",
                                 "etage": "4",
                                 "loyer": 400,
@@ -553,7 +586,16 @@
                         "accomodationsId": [
                             1
                         ]
-                    }
+                    },
+                    "rents": [
+                        {
+                            "id": 1,
+                            "month": "Mars",
+                            "isPayed": true,
+                            "initialDate": "15/03/2022",
+                            "amount": 265
+                        }
+                    ]
                 },
                 {
                     "id": 2,
@@ -582,7 +624,7 @@
                         },
                         "groups": [
                             {
-                                "id": 2,
+                                "id": 1,
                                 "name": "Le groupe de test",
                                 "city": "Saint-Jean",
                                 "accomodations": [
@@ -623,14 +665,14 @@
                         ]
                     },
                     "groups": {
-                        "id": 2,
+                        "id": 1,
                         "name": "Le groupe de test",
                         "city": "Saint-Jean",
                         "accomodations": [
                             {
                                 "id": 1,
                                 "name": "Appartement de Jean",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "11 rue saint jean, 32159, Saint-Jean",
                                 "etage": "2",
                                 "loyer": 245,
@@ -646,7 +688,7 @@
                             {
                                 "id": 2,
                                 "name": "Appartement de Janette",
-                                "photo": "",
+                                "photo": "https://picsum.photos/300/200",
                                 "address": "12 rue saint jean, 32159, Saint-Jean",
                                 "etage": "4",
                                 "loyer": 400,
@@ -671,7 +713,16 @@
                         "accomodationsId": [
                             2
                         ]
-                    }
+                    },
+                    "rents": [
+                        {
+                            "id": 2,
+                            "month": "Mars",
+                            "isPayed": false,
+                            "initialDate": "15/03/2022",
+                            "amount": 265
+                        }
+                    ]
                 },
                 {
                     "id": 3,
@@ -700,7 +751,7 @@
                         },
                         "groups": [
                             {
-                                "id": 2,
+                                "id": 1,
                                 "name": "Le groupe de test",
                                 "city": "Saint-Jean",
                                 "accomodations": [
@@ -741,7 +792,7 @@
                         ]
                     },
                     "groups": {
-                        "id": 2,
+                        "id": 1,
                         "name": "Le groupe de test",
                         "city": "Saint-Jean",
                         "accomodations": [
@@ -779,7 +830,16 @@
                             }
                         ]
                     },
-                    "locataire": null
+                    "locataire": null,
+                    "rents": [
+                        {
+                            "id": 3,
+                            "month": "Mars",
+                            "isPayed": false,
+                            "initialDate": "02/03/2022",
+                            "amount": 265
+                        }
+                    ]
                 }
             ]
         }
