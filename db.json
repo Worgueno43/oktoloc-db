@@ -422,6 +422,7 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
             "uploadDate": "12/12/2021",
             "archive": false,
+            "accomodationId": 1,
             "tags": [
                 {
                     "id": 2,
