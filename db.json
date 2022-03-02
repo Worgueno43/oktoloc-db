@@ -362,7 +362,7 @@
                     }
                 ]
             },
-            "locataireId": {
+            "locataire": {
                 "id": 2,
                 "lastName": "Doe",
                 "firstName": "Janette",
