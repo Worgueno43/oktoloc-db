@@ -89,7 +89,7 @@
                 {
                     "id": 1,
                     "name": "Appartement de Jean",
-                    "photo": "",
+                    "photo": "https://picsum.photos/300/200",
                     "address": "11 rue saint jean, 32159, Saint-Jean",
                     "etage": "2",
                     "loyer": 245,
@@ -207,7 +207,7 @@
                 {
                     "id": 2,
                     "name": "Appartement de Janette",
-                    "photo": "",
+                    "photo": "https://picsum.photos/300/200",
                     "address": "12 rue saint jean, 32159, Saint-Jean",
                     "etage": "4",
                     "loyer": 400,
@@ -329,7 +329,7 @@
         {
             "id": 1,
             "name": "Appartement de Jean",
-            "photo": "",
+            "photo": "https://picsum.photos/300/200",
             "address": "11 rue saint jean, 32159, Saint-Jean",
             "etage": "2",
             "loyer": 245,
@@ -404,7 +404,7 @@
                     {
                         "id": 1,
                         "name": "Appartement de Jean",
-                        "photo": "",
+                        "photo": "https://picsum.photos/300/200",
                         "address": "11 rue saint jean, 32159, Saint-Jean",
                         "etage": "2",
                         "loyer": 245,
@@ -420,7 +420,7 @@
                     {
                         "id": 2,
                         "name": "Appartement de Janette",
-                        "photo": "",
+                        "photo": "https://picsum.photos/300/200",
                         "address": "12 rue saint jean, 32159, Saint-Jean",
                         "etage": "4",
                         "loyer": 400,
@@ -450,7 +450,7 @@
         {
             "id": 2,
             "name": "Appartement de Janette",
-            "photo": "",
+            "photo": "https://picsum.photos/300/200",
             "address": "12 rue saint jean, 32159, Saint-Jean",
             "etage": "4",
             "loyer": 400,
@@ -522,7 +522,7 @@
                     {
                         "id": 1,
                         "name": "Appartement de Jean",
-                        "photo": "",
+                        "photo": "https://picsum.photos/300/200",
                         "address": "11 rue saint jean, 32159, Saint-Jean",
                         "etage": "2",
                         "loyer": 245,
@@ -538,7 +538,7 @@
                     {
                         "id": 2,
                         "name": "Appartement de Janette",
-                        "photo": "",
+                        "photo": "https://picsum.photos/300/200",
                         "address": "12 rue saint jean, 32159, Saint-Jean",
                         "etage": "4",
                         "loyer": 400,
