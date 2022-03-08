@@ -57,7 +57,7 @@
                             "status": true,
                             "userId": 1,
                             "groupsId": 1,
-                            "locataireId": 1
+                            "tenantId": 1
                         },
                         {
                             "id": 2,
@@ -73,7 +73,7 @@
                             "status": true,
                             "userId": 1,
                             "groupsId": 1,
-                            "locataireId": 2
+                            "tenantId": 2
                         }
                     ]
                 }
@@ -91,12 +91,16 @@
                     "name": "Appartement de Jean",
                     "photo": "https://picsum.photos/300/200",
                     "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": "2",
+                    "etage": 1,
                     "loyer": 245,
                     "charges": 20,
                     "surface": 70,
                     "caution": 245,
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "nbPiece": 2,
+                    "ges": "B",
+                    "energeticClass": "N/A",
+                    "isFurnished": true,
                     "type": {
                         "id": 1,
                         "label": "Appartement"
@@ -134,7 +138,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 1
+                                        "tenantId": 1
                                     },
                                     {
                                         "id": 2,
@@ -150,7 +154,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 2
+                                        "tenantId": 2
                                     }
                                 ]
                             }
@@ -175,7 +179,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -191,11 +195,11 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     },
-                    "locataire": {
+                    "tenant": {
                         "id": 1,
                         "lastName": "Doe",
                         "firstName": "Jean",
@@ -214,6 +218,71 @@
                             "initialDate": "15/03/2022",
                             "amount": 265
                         }
+                    ],
+                    "documents": [
+                        {
+                            "id": 1,
+                            "name": "États des lieux",
+                            "extention": "doc",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                            "uploadDate": "12/12/2021",
+                            "archive": false,
+                            "size": "200 KB",
+                            "tags": [
+                                {
+                                    "id": 5,
+                                    "label": "Bail",
+                                    "slug": "lease"
+                                },
+                                {
+                                    "id": 4,
+                                    "label": "Quittance",
+                                    "slug": "receipt"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Suivi-travaux",
+                            "extention": "xls",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                            "uploadDate": "12/12/2021",
+                            "archive": false,
+                            "size": "200 KB",
+                            "tags": [
+                                {
+                                    "id": 5,
+                                    "label": "Bail",
+                                    "lease": "tenant"
+                                },
+                                {
+                                    "id": 2,
+                                    "label": "Assurance",
+                                    "slug": "insurance"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Assurance",
+                            "extention": "img",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                            "uploadDate": "12/12/2021",
+                            "archive": true,
+                            "size": "200 KB",
+                            "tags": [
+                                {
+                                    "id": 1,
+                                    "label": "tenant",
+                                    "slug": "tenant"
+                                },
+                                {
+                                    "id": 2,
+                                    "label": "Assurance",
+                                    "slug": "insurance"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
@@ -221,12 +290,16 @@
                     "name": "Appartement de Janette",
                     "photo": "https://picsum.photos/300/200",
                     "address": "12 rue saint jean, 32159, Saint-Jean",
-                    "etage": "4",
+                    "etage": 2,
                     "loyer": 400,
                     "charges": 120,
                     "surface": 200,
                     "caution": 400,
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "nbPiece": 4,
+                    "ges": "A",
+                    "energeticClass": "C",
+                    "isFurnished": false,
                     "type": {
                         "id": 1,
                         "label": "Appartement"
@@ -261,7 +334,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 1
+                                        "tenantId": 1
                                     },
                                     {
                                         "id": 2,
@@ -277,7 +350,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 2
+                                        "tenantId": 2
                                     }
                                 ]
                             }
@@ -302,7 +375,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -318,11 +391,11 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     },
-                    "locataire": {
+                    "tenant": {
                         "id": 2,
                         "lastName": "Doe",
                         "firstName": "Janette",
@@ -338,7 +411,7 @@
                             "id": 2,
                             "month": "Mars",
                             "isPayed": false,
-                            "initialDate": "15/03/2022",
+                            "initialDate": "03/02/2022",
                             "amount": 265
                         }
                     ]
@@ -348,12 +421,16 @@
                     "name": "Appartement de hanté",
                     "photo": "https://picsum.photos/300/200",
                     "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": "3",
+                    "etage": 0,
                     "loyer": 245,
                     "charges": 20,
                     "surface": 70,
                     "caution": 245,
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "nbPiece": 3,
+                    "ges": "N/A",
+                    "energeticClass": "A",
+                    "isFurnished": true,
                     "type": {
                         "id": 1,
                         "label": "Appartement"
@@ -388,7 +465,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 1
+                                        "tenantId": 1
                                     },
                                     {
                                         "id": 2,
@@ -404,7 +481,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 2
+                                        "tenantId": 2
                                     }
                                 ]
                             }
@@ -429,7 +506,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -445,11 +522,11 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     },
-                    "locataire": null,
+                    "tenant": null,
                     "rents": [
                         {
                             "id": 3,
@@ -464,7 +541,7 @@
         },
         {
             "id": 2,
-            "name": "Immeuble Rue Saint Raphaël",
+            "name": "Logements Rue Saint Raphaël",
             "city": "Le Puy-En-Velay",
             "accomodations": [
                 {
@@ -472,12 +549,16 @@
                     "name": "Appartement de Jean",
                     "photo": "https://picsum.photos/300/200",
                     "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": "2",
+                    "etage": 1,
                     "loyer": 245,
                     "charges": 20,
                     "surface": 70,
                     "caution": 245,
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "nbPiece": 2,
+                    "ges": "B",
+                    "energeticClass": "N/A",
+                    "isFurnished": true,
                     "type": {
                         "id": 1,
                         "label": "Appartement"
@@ -515,7 +596,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 1
+                                        "tenantId": 1
                                     },
                                     {
                                         "id": 2,
@@ -531,7 +612,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 2
+                                        "tenantId": 2
                                     }
                                 ]
                             }
@@ -556,7 +637,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -572,11 +653,11 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     },
-                    "locataire": {
+                    "tenant": {
                         "id": 1,
                         "lastName": "Doe",
                         "firstName": "Jean",
@@ -595,6 +676,71 @@
                             "initialDate": "15/03/2022",
                             "amount": 265
                         }
+                    ],
+                    "documents": [
+                        {
+                            "id": 1,
+                            "name": "États des lieux",
+                            "extention": "doc",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                            "uploadDate": "12/12/2021",
+                            "archive": false,
+                            "size": "200 KB",
+                            "tags": [
+                                {
+                                    "id": 5,
+                                    "label": "Bail",
+                                    "lease": "tenant"
+                                },
+                                {
+                                    "id": 4,
+                                    "label": "Quittance",
+                                    "slug": "receipt"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Suivi-travaux",
+                            "extention": "xls",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                            "uploadDate": "12/12/2021",
+                            "archive": false,
+                            "size": "200 KB",
+                            "tags": [
+                                {
+                                    "id": 5,
+                                    "label": "Bail",
+                                    "lease": "tenant"
+                                },
+                                {
+                                    "id": 2,
+                                    "label": "Assurance",
+                                    "slug": "insurance"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Assurance",
+                            "extention": "img",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                            "uploadDate": "12/12/2021",
+                            "archive": true,
+                            "size": "200 KB",
+                            "tags": [
+                                {
+                                    "id": 1,
+                                    "label": "tenant",
+                                    "slug": "tenant"
+                                },
+                                {
+                                    "id": 2,
+                                    "label": "Assurance",
+                                    "slug": "insurance"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
@@ -602,12 +748,16 @@
                     "name": "Appartement de Janette",
                     "photo": "https://picsum.photos/300/200",
                     "address": "12 rue saint jean, 32159, Saint-Jean",
-                    "etage": "4",
+                    "etage": 2,
                     "loyer": 400,
                     "charges": 120,
                     "surface": 200,
                     "caution": 400,
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "nbPiece": 4,
+                    "ges": "A",
+                    "energeticClass": "C",
+                    "isFurnished": false,
                     "type": {
                         "id": 1,
                         "label": "Appartement"
@@ -642,7 +792,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 1
+                                        "tenantId": 1
                                     },
                                     {
                                         "id": 2,
@@ -658,7 +808,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 2
+                                        "tenantId": 2
                                     }
                                 ]
                             }
@@ -683,7 +833,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -699,11 +849,11 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     },
-                    "locataire": {
+                    "tenant": {
                         "id": 2,
                         "lastName": "Doe",
                         "firstName": "Janette",
@@ -719,7 +869,7 @@
                             "id": 2,
                             "month": "Mars",
                             "isPayed": false,
-                            "initialDate": "15/03/2022",
+                            "initialDate": "03/02/2022",
                             "amount": 265
                         }
                     ]
@@ -729,12 +879,16 @@
                     "name": "Appartement de hanté",
                     "photo": "https://picsum.photos/300/200",
                     "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": "3",
+                    "etage": 0,
                     "loyer": 245,
                     "charges": 20,
                     "surface": 70,
                     "caution": 245,
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "nbPiece": 3,
+                    "ges": "N/A",
+                    "energeticClass": "A",
+                    "isFurnished": true,
                     "type": {
                         "id": 1,
                         "label": "Appartement"
@@ -769,7 +923,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 1
+                                        "tenantId": 1
                                     },
                                     {
                                         "id": 2,
@@ -785,7 +939,7 @@
                                         "status": true,
                                         "userId": 1,
                                         "groupsId": 1,
-                                        "locataireId": 2
+                                        "tenantId": 2
                                     }
                                 ]
                             }
@@ -810,7 +964,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -826,11 +980,11 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     },
-                    "locataire": null,
+                    "tenant": null,
                     "rents": [
                         {
                             "id": 3,
@@ -850,12 +1004,16 @@
             "name": "Appartement de Jean",
             "photo": "https://picsum.photos/300/200",
             "address": "11 rue saint jean, 32159, Saint-Jean",
-            "etage": "2",
+            "etage": 1,
             "loyer": 245,
             "charges": 20,
             "surface": 70,
             "caution": 245,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "nbPiece": 2,
+            "ges": "B",
+            "energeticClass": "N/A",
+            "isFurnished": true,
             "type": {
                 "id": 1,
                 "label": "Appartement"
@@ -893,7 +1051,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -909,7 +1067,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     }
@@ -934,7 +1092,7 @@
                         "status": true,
                         "userId": 1,
                         "groupsId": 1,
-                        "locataireId": 1
+                        "tenantId": 1
                     },
                     {
                         "id": 2,
@@ -950,11 +1108,11 @@
                         "status": true,
                         "userId": 1,
                         "groupsId": 1,
-                        "locataireId": 2
+                        "tenantId": 2
                     }
                 ]
             },
-            "locataire": {
+            "tenant": {
                 "id": 1,
                 "lastName": "Doe",
                 "firstName": "Jean",
@@ -973,6 +1131,71 @@
                     "initialDate": "15/03/2022",
                     "amount": 265
                 }
+            ],
+            "documents": [
+                {
+                    "id": 1,
+                    "name": "États des lieux",
+                    "extention": "doc",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "uploadDate": "12/12/2021",
+                    "archive": false,
+                    "size": "200 KB",
+                    "tags": [
+                        {
+                            "id": 5,
+                            "label": "Bail",
+                            "slug": "lease"
+                        },
+                        {
+                            "id": 4,
+                            "label": "Quittance",
+                            "slug": "receipt"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Suivi-travaux",
+                    "extention": "xls",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "uploadDate": "12/12/2021",
+                    "archive": false,
+                    "size": "200 KB",
+                    "tags": [
+                        {
+                            "id": 5,
+                            "label": "Bail",
+                            "slug": "lease"
+                        },
+                        {
+                            "id": 2,
+                            "label": "Assurance",
+                            "slug": "insurance"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Assurance",
+                    "extention": "img",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+                    "uploadDate": "12/12/2021",
+                    "archive": true,
+                    "size": "200 KB",
+                    "tags": [
+                        {
+                            "id": 1,
+                            "label": "tenant",
+                            "slug": "tenant"
+                        },
+                        {
+                            "id": 2,
+                            "label": "Assurance",
+                            "slug": "insurance"
+                        }
+                    ]
+                }
             ]
         },
         {
@@ -980,12 +1203,16 @@
             "name": "Appartement de Janette",
             "photo": "https://picsum.photos/300/200",
             "address": "12 rue saint jean, 32159, Saint-Jean",
-            "etage": "4",
+            "etage": 2,
             "loyer": 400,
             "charges": 120,
             "surface": 200,
             "caution": 400,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "nbPiece": 4,
+            "ges": "A",
+            "energeticClass": "C",
+            "isFurnished": false,
             "type": {
                 "id": 1,
                 "label": "Appartement"
@@ -1020,7 +1247,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -1036,7 +1263,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     }
@@ -1061,7 +1288,7 @@
                         "status": true,
                         "userId": 1,
                         "groupsId": 1,
-                        "locataireId": 1
+                        "tenantId": 1
                     },
                     {
                         "id": 2,
@@ -1077,11 +1304,11 @@
                         "status": true,
                         "userId": 1,
                         "groupsId": 1,
-                        "locataireId": 2
+                        "tenantId": 2
                     }
                 ]
             },
-            "locataire": {
+            "tenant": {
                 "id": 2,
                 "lastName": "Doe",
                 "firstName": "Janette",
@@ -1097,7 +1324,7 @@
                     "id": 2,
                     "month": "Mars",
                     "isPayed": false,
-                    "initialDate": "15/03/2022",
+                    "initialDate": "03/02/2022",
                     "amount": 265
                 }
             ]
@@ -1107,12 +1334,16 @@
             "name": "Appartement de hanté",
             "photo": "https://picsum.photos/300/200",
             "address": "11 rue saint jean, 32159, Saint-Jean",
-            "etage": "3",
+            "etage": 0,
             "loyer": 245,
             "charges": 20,
             "surface": 70,
             "caution": 245,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "nbPiece": 3,
+            "ges": "N/A",
+            "energeticClass": "A",
+            "isFurnished": true,
             "type": {
                 "id": 1,
                 "label": "Appartement"
@@ -1147,7 +1378,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 1
+                                "tenantId": 1
                             },
                             {
                                 "id": 2,
@@ -1163,7 +1394,7 @@
                                 "status": true,
                                 "userId": 1,
                                 "groupsId": 1,
-                                "locataireId": 2
+                                "tenantId": 2
                             }
                         ]
                     }
@@ -1188,7 +1419,7 @@
                         "status": true,
                         "userId": 1,
                         "groupsId": 1,
-                        "locataireId": 1
+                        "tenantId": 1
                     },
                     {
                         "id": 2,
@@ -1204,11 +1435,11 @@
                         "status": true,
                         "userId": 1,
                         "groupsId": 1,
-                        "locataireId": 2
+                        "tenantId": 2
                     }
                 ]
             },
-            "locataire": null,
+            "tenant": null,
             "rents": [
                 {
                     "id": 3,
@@ -1220,7 +1451,7 @@
             ]
         }
     ],
-    "locataires": [
+    "tenants": [
         {
             "id": 1,
             "lastName": "Doe",
@@ -1274,7 +1505,6 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
             "uploadDate": "12/12/2021",
             "archive": false,
-            "accomodationId": 1,
             "tags": [
                 {
                     "id": 2,
@@ -1290,19 +1520,33 @@
     "tags": [
         {
             "id": 1,
-            "label": "Bail"
+            "label": "tenant",
+            "slug": "tenant"
         },
         {
             "id": 2,
-            "label": "Facture"
+            "label": "Assurance",
+            "slug": "insurance"
         },
         {
             "id": 3,
-            "label": "Quittance"
+            "label": "Caution",
+            "slug": "deposit"
         },
         {
             "id": 4,
-            "label": "Assurance"
+            "label": "Quittance",
+            "slug": "receipt"
+        },
+        {
+            "id": 5,
+            "label": "Bail",
+            "slug": "lease"
+        },
+        {
+            "id": 6,
+            "label": "États des lieux",
+            "slug": "inventory_of_fixtures"
         }
     ]
 }
