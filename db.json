@@ -1,1458 +1,215 @@
 {
-    "roles": [
+  "roles": [
+    {
+      "id": 1,
+      "label": "Administrateur"
+    },
+    {
+      "id": 2,
+      "label": "Utilisateur"
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "label": "Appartement"
+    },
+    {
+      "id": 2,
+      "label": "Maison"
+    },
+    {
+      "id": 3,
+      "label": "Garage"
+    },
+    {
+      "id": 4,
+      "label": "Commerce"
+    }
+  ],
+  "historyTypes": [
+    {
+      "id": 1,
+      "label": "Locataire"
+    },
+    {
+      "id": 2,
+      "label": "Travaux"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "email": "john.doe@gmail.com",
+      "phone": "0606060606",
+      "role": {
+        "id": 2,
+        "label": "Utilisateur"
+      },
+      "groups": [
         {
-            "id": 1,
-            "label": "Administrateur"
-        },
-        {
-            "id": 2,
-            "label": "Utilisateur"
+          "id": 1,
+          "name": "Le groupe de test",
+          "city": "Saint-Jean",
+          "accomodations": [
+            {
+              "id": 1,
+              "name": "Appartement de Jean",
+              "photo": "",
+              "address": "11 rue saint jean, 32159, Saint-Jean",
+              "etage": "2",
+              "loyer": 245,
+              "charges": 20,
+              "surface": 70,
+              "caution": 245,
+              "typeId": 1,
+              "status": true,
+              "userId": 1,
+              "groupsId": 1,
+              "tenantId": 1
+            },
+            {
+              "id": 2,
+              "name": "Appartement de Janette",
+              "photo": "",
+              "address": "12 rue saint jean, 32159, Saint-Jean",
+              "etage": "4",
+              "loyer": 400,
+              "charges": 120,
+              "surface": 200,
+              "caution": 400,
+              "typeId": 1,
+              "status": true,
+              "userId": 1,
+              "groupsId": 1,
+              "tenantId": 2
+            }
+          ]
         }
-    ],
-    "types": [
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Immeuble Rue Saint Jacques",
+      "city": "Le Puy-En-Velay",
+      "accomodations": [
         {
+          "id": 1,
+          "name": "Appartement de Jean",
+          "photo": "https://picsum.photos/300/200",
+          "address": "11 rue saint jean, 32159, Saint-Jean",
+          "etage": 1,
+          "loyer": 245,
+          "charges": 20,
+          "surface": 70,
+          "caution": 245,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "nbPiece": 2,
+          "ges": "B",
+          "energeticClass": "N/A",
+          "isFurnished": true,
+          "type": {
             "id": 1,
             "label": "Appartement"
-        },
-        {
-            "id": 2,
-            "label": "Maison"
-        },
-        {
-            "id": 3,
-            "label": "Garage"
-        },
-        {
-            "id": 4,
-            "label": "Commerce"
-        }
-    ],
-    "users": [
-        {
+          },
+          "status": {
+            "id": 1,
+            "label": "Loué"
+          },
+          "user": {
             "id": 1,
             "firstName": "John",
             "email": "john.doe@gmail.com",
             "phone": "0606060606",
             "role": {
-                "id": 2,
-                "label": "Utilisateur"
+              "id": 2,
+              "label": "Utilisateur"
             },
             "groups": [
-                {
-                    "id": 1,
-                    "name": "Le groupe de test",
-                    "city": "Saint-Jean",
-                    "accomodations": [
-                        {
-                            "id": 1,
-                            "name": "Appartement de Jean",
-                            "photo": "",
-                            "address": "11 rue saint jean, 32159, Saint-Jean",
-                            "etage": "2",
-                            "loyer": 245,
-                            "charges": 20,
-                            "surface": 70,
-                            "caution": 245,
-                            "typeId": 1,
-                            "status": true,
-                            "userId": 1,
-                            "groupsId": 1,
-                            "tenantId": 1
-                        },
-                        {
-                            "id": 2,
-                            "name": "Appartement de Janette",
-                            "photo": "",
-                            "address": "12 rue saint jean, 32159, Saint-Jean",
-                            "etage": "4",
-                            "loyer": 400,
-                            "charges": 120,
-                            "surface": 200,
-                            "caution": 400,
-                            "typeId": 1,
-                            "status": true,
-                            "userId": 1,
-                            "groupsId": 1,
-                            "tenantId": 2
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "groups": [
-        {
-            "id": 1,
-            "name": "Immeuble Rue Saint Jacques",
-            "city": "Le Puy-En-Velay",
-            "accomodations": [
-                {
-                    "id": 1,
-                    "name": "Appartement de Jean",
-                    "photo": "https://picsum.photos/300/200",
-                    "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": 1,
-                    "loyer": 245,
-                    "charges": 20,
-                    "surface": 70,
-                    "caution": 245,
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "nbPiece": 2,
-                    "ges": "B",
-                    "energeticClass": "N/A",
-                    "isFurnished": true,
-                    "type": {
-                        "id": 1,
-                        "label": "Appartement"
-                    },
-                    "status": {
-                        "id": 1,
-                        "label": "Loué"
-                    },
-                    "user": {
-                        "id": 1,
-                        "firstName": "John",
-                        "email": "john.doe@gmail.com",
-                        "phone": "0606060606",
-                        "role": {
-                            "id": 2,
-                            "label": "Utilisateur"
-                        },
-                        "groups": [
-                            {
-                                "id": 1,
-                                "name": "Le groupe de test",
-                                "city": "Saint-Jean",
-                                "accomodations": [
-                                    {
-                                        "id": 1,
-                                        "name": "Appartement de Jean",
-                                        "photo": "",
-                                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "2",
-                                        "loyer": 245,
-                                        "charges": 20,
-                                        "surface": 70,
-                                        "caution": 245,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 1
-                                    },
-                                    {
-                                        "id": 2,
-                                        "name": "Appartement de Janette",
-                                        "photo": "",
-                                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "4",
-                                        "loyer": 400,
-                                        "charges": 120,
-                                        "surface": 200,
-                                        "caution": 400,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 2
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "groups": {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    },
-                    "tenant": {
-                        "id": 1,
-                        "lastName": "Doe",
-                        "firstName": "Jean",
-                        "email": "jeandoe@hotmail.com",
-                        "phone": "0707070707",
-                        "enterDate": "12/09/2021",
-                        "accomodationsId": [
-                            1
-                        ]
-                    },
-                    "rents": [
-                        {
-                            "id": 1,
-                            "month": "Mars",
-                            "isPayed": true,
-                            "initialDate": "15/03/2022",
-                            "amount": 265
-                        }
-                    ],
-                    "documents": [
-                        {
-                            "id": 1,
-                            "name": "États des lieux",
-                            "extention": "doc",
-                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                            "uploadDate": "12/12/2021",
-                            "archive": false,
-                            "size": "200 KB",
-                            "tags": [
-                                {
-                                    "id": 5,
-                                    "label": "Bail",
-                                    "slug": "lease"
-                                },
-                                {
-                                    "id": 4,
-                                    "label": "Quittance",
-                                    "slug": "receipt"
-                                }
-                            ]
-                        },
-                        {
-                            "id": 2,
-                            "name": "Suivi-travaux",
-                            "extention": "xls",
-                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                            "uploadDate": "12/12/2021",
-                            "archive": false,
-                            "size": "200 KB",
-                            "tags": [
-                                {
-                                    "id": 5,
-                                    "label": "Bail",
-                                    "lease": "tenant"
-                                },
-                                {
-                                    "id": 2,
-                                    "label": "Assurance",
-                                    "slug": "insurance"
-                                }
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "name": "Assurance",
-                            "extention": "img",
-                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                            "uploadDate": "12/12/2021",
-                            "archive": true,
-                            "size": "200 KB",
-                            "tags": [
-                                {
-                                    "id": 1,
-                                    "label": "tenant",
-                                    "slug": "tenant"
-                                },
-                                {
-                                    "id": 2,
-                                    "label": "Assurance",
-                                    "slug": "insurance"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "name": "Appartement de Janette",
-                    "photo": "https://picsum.photos/300/200",
-                    "address": "12 rue saint jean, 32159, Saint-Jean",
-                    "etage": 2,
-                    "loyer": 400,
-                    "charges": 120,
-                    "surface": 200,
-                    "caution": 400,
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "nbPiece": 4,
-                    "ges": "A",
-                    "energeticClass": "C",
-                    "isFurnished": false,
-                    "type": {
-                        "id": 1,
-                        "label": "Appartement"
-                    },
-                    "status": true,
-                    "user": {
-                        "id": 1,
-                        "firstName": "John",
-                        "email": "john.doe@gmail.com",
-                        "phone": "0606060606",
-                        "role": {
-                            "id": 2,
-                            "label": "Utilisateur"
-                        },
-                        "groups": [
-                            {
-                                "id": 1,
-                                "name": "Le groupe de test",
-                                "city": "Saint-Jean",
-                                "accomodations": [
-                                    {
-                                        "id": 1,
-                                        "name": "Appartement de Jean",
-                                        "photo": "",
-                                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "2",
-                                        "loyer": 245,
-                                        "charges": 20,
-                                        "surface": 70,
-                                        "caution": 245,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 1
-                                    },
-                                    {
-                                        "id": 2,
-                                        "name": "Appartement de Janette",
-                                        "photo": "",
-                                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "4",
-                                        "loyer": 400,
-                                        "charges": 120,
-                                        "surface": 200,
-                                        "caution": 400,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 2
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "groups": {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    },
-                    "tenant": {
-                        "id": 2,
-                        "lastName": "Doe",
-                        "firstName": "Janette",
-                        "email": "janettedoe@wanadoo.com",
-                        "phone": "0707070707",
-                        "enterDate": "09/12/2012",
-                        "accomodationsId": [
-                            2
-                        ]
-                    },
-                    "rents": [
-                        {
-                            "id": 2,
-                            "month": "Mars",
-                            "isPayed": false,
-                            "initialDate": "03/02/2022",
-                            "amount": 265
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "name": "Appartement de hanté",
-                    "photo": "https://picsum.photos/300/200",
-                    "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": 0,
-                    "loyer": 245,
-                    "charges": 20,
-                    "surface": 70,
-                    "caution": 245,
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "nbPiece": 3,
-                    "ges": "N/A",
-                    "energeticClass": "A",
-                    "isFurnished": true,
-                    "type": {
-                        "id": 1,
-                        "label": "Appartement"
-                    },
-                    "status": false,
-                    "user": {
-                        "id": 1,
-                        "firstName": "John",
-                        "email": "john.doe@gmail.com",
-                        "phone": "0606060606",
-                        "role": {
-                            "id": 2,
-                            "label": "Utilisateur"
-                        },
-                        "groups": [
-                            {
-                                "id": 1,
-                                "name": "Le groupe de test",
-                                "city": "Saint-Jean",
-                                "accomodations": [
-                                    {
-                                        "id": 1,
-                                        "name": "Appartement de Jean",
-                                        "photo": "",
-                                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "2",
-                                        "loyer": 245,
-                                        "charges": 20,
-                                        "surface": 70,
-                                        "caution": 245,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 1
-                                    },
-                                    {
-                                        "id": 2,
-                                        "name": "Appartement de Janette",
-                                        "photo": "",
-                                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "4",
-                                        "loyer": 400,
-                                        "charges": 120,
-                                        "surface": 200,
-                                        "caution": 400,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 2
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "groups": {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    },
-                    "tenant": null,
-                    "rents": [
-                        {
-                            "id": 3,
-                            "month": "Mars",
-                            "isPayed": false,
-                            "initialDate": "02/03/2022",
-                            "amount": 265
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Logements Rue Saint Raphaël",
-            "city": "Le Puy-En-Velay",
-            "accomodations": [
-                {
-                    "id": 1,
-                    "name": "Appartement de Jean",
-                    "photo": "https://picsum.photos/300/200",
-                    "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": 1,
-                    "loyer": 245,
-                    "charges": 20,
-                    "surface": 70,
-                    "caution": 245,
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "nbPiece": 2,
-                    "ges": "B",
-                    "energeticClass": "N/A",
-                    "isFurnished": true,
-                    "type": {
-                        "id": 1,
-                        "label": "Appartement"
-                    },
-                    "status": {
-                        "id": 1,
-                        "label": "Loué"
-                    },
-                    "user": {
-                        "id": 1,
-                        "firstName": "John",
-                        "email": "john.doe@gmail.com",
-                        "phone": "0606060606",
-                        "role": {
-                            "id": 2,
-                            "label": "Utilisateur"
-                        },
-                        "groups": [
-                            {
-                                "id": 1,
-                                "name": "Le groupe de test",
-                                "city": "Saint-Jean",
-                                "accomodations": [
-                                    {
-                                        "id": 1,
-                                        "name": "Appartement de Jean",
-                                        "photo": "",
-                                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "2",
-                                        "loyer": 245,
-                                        "charges": 20,
-                                        "surface": 70,
-                                        "caution": 245,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 1
-                                    },
-                                    {
-                                        "id": 2,
-                                        "name": "Appartement de Janette",
-                                        "photo": "",
-                                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "4",
-                                        "loyer": 400,
-                                        "charges": 120,
-                                        "surface": 200,
-                                        "caution": 400,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 2
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "groups": {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    },
-                    "tenant": {
-                        "id": 1,
-                        "lastName": "Doe",
-                        "firstName": "Jean",
-                        "email": "jeandoe@hotmail.com",
-                        "phone": "0707070707",
-                        "enterDate": "12/09/2021",
-                        "accomodationsId": [
-                            1
-                        ]
-                    },
-                    "rents": [
-                        {
-                            "id": 1,
-                            "month": "Mars",
-                            "isPayed": true,
-                            "initialDate": "15/03/2022",
-                            "amount": 265
-                        }
-                    ],
-                    "documents": [
-                        {
-                            "id": 1,
-                            "name": "États des lieux",
-                            "extention": "doc",
-                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                            "uploadDate": "12/12/2021",
-                            "archive": false,
-                            "size": "200 KB",
-                            "tags": [
-                                {
-                                    "id": 5,
-                                    "label": "Bail",
-                                    "lease": "tenant"
-                                },
-                                {
-                                    "id": 4,
-                                    "label": "Quittance",
-                                    "slug": "receipt"
-                                }
-                            ]
-                        },
-                        {
-                            "id": 2,
-                            "name": "Suivi-travaux",
-                            "extention": "xls",
-                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                            "uploadDate": "12/12/2021",
-                            "archive": false,
-                            "size": "200 KB",
-                            "tags": [
-                                {
-                                    "id": 5,
-                                    "label": "Bail",
-                                    "lease": "tenant"
-                                },
-                                {
-                                    "id": 2,
-                                    "label": "Assurance",
-                                    "slug": "insurance"
-                                }
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "name": "Assurance",
-                            "extention": "img",
-                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                            "uploadDate": "12/12/2021",
-                            "archive": true,
-                            "size": "200 KB",
-                            "tags": [
-                                {
-                                    "id": 1,
-                                    "label": "tenant",
-                                    "slug": "tenant"
-                                },
-                                {
-                                    "id": 2,
-                                    "label": "Assurance",
-                                    "slug": "insurance"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "name": "Appartement de Janette",
-                    "photo": "https://picsum.photos/300/200",
-                    "address": "12 rue saint jean, 32159, Saint-Jean",
-                    "etage": 2,
-                    "loyer": 400,
-                    "charges": 120,
-                    "surface": 200,
-                    "caution": 400,
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "nbPiece": 4,
-                    "ges": "A",
-                    "energeticClass": "C",
-                    "isFurnished": false,
-                    "type": {
-                        "id": 1,
-                        "label": "Appartement"
-                    },
-                    "status": true,
-                    "user": {
-                        "id": 1,
-                        "firstName": "John",
-                        "email": "john.doe@gmail.com",
-                        "phone": "0606060606",
-                        "role": {
-                            "id": 2,
-                            "label": "Utilisateur"
-                        },
-                        "groups": [
-                            {
-                                "id": 1,
-                                "name": "Le groupe de test",
-                                "city": "Saint-Jean",
-                                "accomodations": [
-                                    {
-                                        "id": 1,
-                                        "name": "Appartement de Jean",
-                                        "photo": "",
-                                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "2",
-                                        "loyer": 245,
-                                        "charges": 20,
-                                        "surface": 70,
-                                        "caution": 245,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 1
-                                    },
-                                    {
-                                        "id": 2,
-                                        "name": "Appartement de Janette",
-                                        "photo": "",
-                                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "4",
-                                        "loyer": 400,
-                                        "charges": 120,
-                                        "surface": 200,
-                                        "caution": 400,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 2
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "groups": {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "https://picsum.photos/300/200",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    },
-                    "tenant": {
-                        "id": 2,
-                        "lastName": "Doe",
-                        "firstName": "Janette",
-                        "email": "janettedoe@wanadoo.com",
-                        "phone": "0707070707",
-                        "enterDate": "09/12/2012",
-                        "accomodationsId": [
-                            2
-                        ]
-                    },
-                    "rents": [
-                        {
-                            "id": 2,
-                            "month": "Mars",
-                            "isPayed": false,
-                            "initialDate": "03/02/2022",
-                            "amount": 265
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "name": "Appartement de hanté",
-                    "photo": "https://picsum.photos/300/200",
-                    "address": "11 rue saint jean, 32159, Saint-Jean",
-                    "etage": 0,
-                    "loyer": 245,
-                    "charges": 20,
-                    "surface": 70,
-                    "caution": 245,
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "nbPiece": 3,
-                    "ges": "N/A",
-                    "energeticClass": "A",
-                    "isFurnished": true,
-                    "type": {
-                        "id": 1,
-                        "label": "Appartement"
-                    },
-                    "status": false,
-                    "user": {
-                        "id": 1,
-                        "firstName": "John",
-                        "email": "john.doe@gmail.com",
-                        "phone": "0606060606",
-                        "role": {
-                            "id": 2,
-                            "label": "Utilisateur"
-                        },
-                        "groups": [
-                            {
-                                "id": 1,
-                                "name": "Le groupe de test",
-                                "city": "Saint-Jean",
-                                "accomodations": [
-                                    {
-                                        "id": 1,
-                                        "name": "Appartement de Jean",
-                                        "photo": "",
-                                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "2",
-                                        "loyer": 245,
-                                        "charges": 20,
-                                        "surface": 70,
-                                        "caution": 245,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 1
-                                    },
-                                    {
-                                        "id": 2,
-                                        "name": "Appartement de Janette",
-                                        "photo": "",
-                                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                                        "etage": "4",
-                                        "loyer": 400,
-                                        "charges": 120,
-                                        "surface": 200,
-                                        "caution": 400,
-                                        "typeId": 1,
-                                        "status": true,
-                                        "userId": 1,
-                                        "groupsId": 1,
-                                        "tenantId": 2
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "groups": {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    },
-                    "tenant": null,
-                    "rents": [
-                        {
-                            "id": 3,
-                            "month": "Mars",
-                            "isPayed": false,
-                            "initialDate": "02/03/2022",
-                            "amount": 265
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "accomodations": [
-        {
-            "id": 1,
-            "name": "Appartement de Jean",
-            "photo": "https://picsum.photos/300/200",
-            "address": "11 rue saint jean, 32159, Saint-Jean",
-            "etage": 1,
-            "loyer": 245,
-            "charges": 20,
-            "surface": 70,
-            "caution": 245,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-            "nbPiece": 2,
-            "ges": "B",
-            "energeticClass": "N/A",
-            "isFurnished": true,
-            "type": {
-                "id": 1,
-                "label": "Appartement"
-            },
-            "status": {
-                "id": 1,
-                "label": "Loué"
-            },
-            "user": {
-                "id": 1,
-                "firstName": "John",
-                "email": "john.doe@gmail.com",
-                "phone": "0606060606",
-                "role": {
-                    "id": 2,
-                    "label": "Utilisateur"
-                },
-                "groups": [
-                    {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    }
-                ]
-            },
-            "groups": {
+              {
                 "id": 1,
                 "name": "Le groupe de test",
                 "city": "Saint-Jean",
                 "accomodations": [
-                    {
-                        "id": 1,
-                        "name": "Appartement de Jean",
-                        "photo": "https://picsum.photos/300/200",
-                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                        "etage": "2",
-                        "loyer": 245,
-                        "charges": 20,
-                        "surface": 70,
-                        "caution": 245,
-                        "typeId": 1,
-                        "status": true,
-                        "userId": 1,
-                        "groupsId": 1,
-                        "tenantId": 1
-                    },
-                    {
-                        "id": 2,
-                        "name": "Appartement de Janette",
-                        "photo": "https://picsum.photos/300/200",
-                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                        "etage": "4",
-                        "loyer": 400,
-                        "charges": 120,
-                        "surface": 200,
-                        "caution": 400,
-                        "typeId": 1,
-                        "status": true,
-                        "userId": 1,
-                        "groupsId": 1,
-                        "tenantId": 2
-                    }
-                ]
-            },
-            "tenant": {
-                "id": 1,
-                "lastName": "Doe",
-                "firstName": "Jean",
-                "email": "jeandoe@hotmail.com",
-                "phone": "0707070707",
-                "enterDate": "12/09/2021",
-                "accomodationsId": [
-                    1
-                ]
-            },
-            "rents": [
-                {
+                  {
                     "id": 1,
-                    "month": "Mars",
-                    "isPayed": true,
-                    "initialDate": "15/03/2022",
-                    "amount": 265
-                }
-            ],
-            "documents": [
-                {
-                    "id": 1,
-                    "name": "États des lieux",
-                    "extention": "doc",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "uploadDate": "12/12/2021",
-                    "archive": false,
-                    "size": "200 KB",
-                    "tags": [
-                        {
-                            "id": 5,
-                            "label": "Bail",
-                            "slug": "lease"
-                        },
-                        {
-                            "id": 4,
-                            "label": "Quittance",
-                            "slug": "receipt"
-                        }
-                    ]
-                },
-                {
+                    "name": "Appartement de Jean",
+                    "photo": "",
+                    "address": "11 rue saint jean, 32159, Saint-Jean",
+                    "etage": "2",
+                    "loyer": 245,
+                    "charges": 20,
+                    "surface": 70,
+                    "caution": 245,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 1
+                  },
+                  {
                     "id": 2,
-                    "name": "Suivi-travaux",
-                    "extention": "xls",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "uploadDate": "12/12/2021",
-                    "archive": false,
-                    "size": "200 KB",
-                    "tags": [
-                        {
-                            "id": 5,
-                            "label": "Bail",
-                            "slug": "lease"
-                        },
-                        {
-                            "id": 2,
-                            "label": "Assurance",
-                            "slug": "insurance"
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "name": "Assurance",
-                    "extention": "img",
-                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-                    "uploadDate": "12/12/2021",
-                    "archive": true,
-                    "size": "200 KB",
-                    "tags": [
-                        {
-                            "id": 1,
-                            "label": "tenant",
-                            "slug": "tenant"
-                        },
-                        {
-                            "id": 2,
-                            "label": "Assurance",
-                            "slug": "insurance"
-                        }
-                    ]
-                }
+                    "name": "Appartement de Janette",
+                    "photo": "",
+                    "address": "12 rue saint jean, 32159, Saint-Jean",
+                    "etage": "4",
+                    "loyer": 400,
+                    "charges": 120,
+                    "surface": 200,
+                    "caution": 400,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 2
+                  }
+                ]
+              }
             ]
-        },
-        {
-            "id": 2,
-            "name": "Appartement de Janette",
-            "photo": "https://picsum.photos/300/200",
-            "address": "12 rue saint jean, 32159, Saint-Jean",
-            "etage": 2,
-            "loyer": 400,
-            "charges": 120,
-            "surface": 200,
-            "caution": 400,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-            "nbPiece": 4,
-            "ges": "A",
-            "energeticClass": "C",
-            "isFurnished": false,
-            "type": {
+          },
+          "groups": {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
                 "id": 1,
-                "label": "Appartement"
-            },
-            "status": true,
-            "user": {
-                "id": 1,
-                "firstName": "John",
-                "email": "john.doe@gmail.com",
-                "phone": "0606060606",
-                "role": {
-                    "id": 2,
-                    "label": "Utilisateur"
-                },
-                "groups": [
-                    {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    }
-                ]
-            },
-            "groups": {
-                "id": 1,
-                "name": "Le groupe de test",
-                "city": "Saint-Jean",
-                "accomodations": [
-                    {
-                        "id": 1,
-                        "name": "Appartement de Jean",
-                        "photo": "https://picsum.photos/300/200",
-                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                        "etage": "2",
-                        "loyer": 245,
-                        "charges": 20,
-                        "surface": 70,
-                        "caution": 245,
-                        "typeId": 1,
-                        "status": true,
-                        "userId": 1,
-                        "groupsId": 1,
-                        "tenantId": 1
-                    },
-                    {
-                        "id": 2,
-                        "name": "Appartement de Janette",
-                        "photo": "https://picsum.photos/300/200",
-                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                        "etage": "4",
-                        "loyer": 400,
-                        "charges": 120,
-                        "surface": 200,
-                        "caution": 400,
-                        "typeId": 1,
-                        "status": true,
-                        "userId": 1,
-                        "groupsId": 1,
-                        "tenantId": 2
-                    }
-                ]
-            },
-            "tenant": {
+                "name": "Appartement de Jean",
+                "photo": "https://picsum.photos/300/200",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
                 "id": 2,
-                "lastName": "Doe",
-                "firstName": "Janette",
-                "email": "janettedoe@wanadoo.com",
-                "phone": "0707070707",
-                "enterDate": "09/12/2012",
-                "accomodationsId": [
-                    2
-                ]
-            },
-            "rents": [
-                {
-                    "id": 2,
-                    "month": "Mars",
-                    "isPayed": false,
-                    "initialDate": "03/02/2022",
-                    "amount": 265
-                }
+                "name": "Appartement de Janette",
+                "photo": "https://picsum.photos/300/200",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
             ]
-        },
-        {
-            "id": 3,
-            "name": "Appartement de hanté",
-            "photo": "https://picsum.photos/300/200",
-            "address": "11 rue saint jean, 32159, Saint-Jean",
-            "etage": 0,
-            "loyer": 245,
-            "charges": 20,
-            "surface": 70,
-            "caution": 245,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-            "nbPiece": 3,
-            "ges": "N/A",
-            "energeticClass": "A",
-            "isFurnished": true,
-            "type": {
-                "id": 1,
-                "label": "Appartement"
-            },
-            "status": false,
-            "user": {
-                "id": 1,
-                "firstName": "John",
-                "email": "john.doe@gmail.com",
-                "phone": "0606060606",
-                "role": {
-                    "id": 2,
-                    "label": "Utilisateur"
-                },
-                "groups": [
-                    {
-                        "id": 1,
-                        "name": "Le groupe de test",
-                        "city": "Saint-Jean",
-                        "accomodations": [
-                            {
-                                "id": 1,
-                                "name": "Appartement de Jean",
-                                "photo": "",
-                                "address": "11 rue saint jean, 32159, Saint-Jean",
-                                "etage": "2",
-                                "loyer": 245,
-                                "charges": 20,
-                                "surface": 70,
-                                "caution": 245,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 1
-                            },
-                            {
-                                "id": 2,
-                                "name": "Appartement de Janette",
-                                "photo": "",
-                                "address": "12 rue saint jean, 32159, Saint-Jean",
-                                "etage": "4",
-                                "loyer": 400,
-                                "charges": 120,
-                                "surface": 200,
-                                "caution": 400,
-                                "typeId": 1,
-                                "status": true,
-                                "userId": 1,
-                                "groupsId": 1,
-                                "tenantId": 2
-                            }
-                        ]
-                    }
-                ]
-            },
-            "groups": {
-                "id": 1,
-                "name": "Le groupe de test",
-                "city": "Saint-Jean",
-                "accomodations": [
-                    {
-                        "id": 1,
-                        "name": "Appartement de Jean",
-                        "photo": "",
-                        "address": "11 rue saint jean, 32159, Saint-Jean",
-                        "etage": "2",
-                        "loyer": 245,
-                        "charges": 20,
-                        "surface": 70,
-                        "caution": 245,
-                        "typeId": 1,
-                        "status": true,
-                        "userId": 1,
-                        "groupsId": 1,
-                        "tenantId": 1
-                    },
-                    {
-                        "id": 2,
-                        "name": "Appartement de Janette",
-                        "photo": "",
-                        "address": "12 rue saint jean, 32159, Saint-Jean",
-                        "etage": "4",
-                        "loyer": 400,
-                        "charges": 120,
-                        "surface": 200,
-                        "caution": 400,
-                        "typeId": 1,
-                        "status": true,
-                        "userId": 1,
-                        "groupsId": 1,
-                        "tenantId": 2
-                    }
-                ]
-            },
-            "tenant": null,
-            "rents": [
-                {
-                    "id": 3,
-                    "month": "Mars",
-                    "isPayed": false,
-                    "initialDate": "02/03/2022",
-                    "amount": 265
-                }
-            ]
-        }
-    ],
-    "tenants": [
-        {
+          },
+          "tenant": {
             "id": 1,
             "lastName": "Doe",
             "firstName": "Jean",
@@ -1460,10 +217,209 @@
             "phone": "0707070707",
             "enterDate": "12/09/2021",
             "accomodationsId": [
-                1
+              1
             ]
+          },
+          "rents": [
+            {
+              "id": 3,
+              "month": "Mars",
+              "isPayed": false,
+              "initialDate": "15/03/2022",
+              "amount": 265
+            },
+            {
+              "id": 2,
+              "month": "Février",
+              "isPayed": true,
+              "initialDate": "15/02/2022",
+              "amount": 265
+            },
+            {
+              "id": 1,
+              "month": "Janvier",
+              "isPayed": true,
+              "initialDate": "15/01/2022",
+              "amount": 265
+            }
+          ],
+          "documents": [
+            {
+              "id": 1,
+              "name": "États des lieux",
+              "extention": "doc",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+              "uploadDate": "12/12/2021",
+              "archive": false,
+              "size": "200 KB",
+              "tags": [
+                {
+                  "id": 5,
+                  "label": "Bail",
+                  "slug": "lease"
+                },
+                {
+                  "id": 4,
+                  "label": "Quittance",
+                  "slug": "receipt"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Suivi-travaux",
+              "extention": "xls",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+              "uploadDate": "12/12/2021",
+              "archive": false,
+              "size": "200 KB",
+              "tags": [
+                {
+                  "id": 5,
+                  "label": "Bail",
+                  "slug": "lease"
+                },
+                {
+                  "id": 2,
+                  "label": "Assurance",
+                  "slug": "insurance"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Assurance",
+              "extention": "img",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+              "uploadDate": "12/12/2021",
+              "archive": true,
+              "size": "200 KB",
+              "tags": [
+                {
+                  "id": 1,
+                  "label": "tenant",
+                  "slug": "tenant"
+                },
+                {
+                  "id": 2,
+                  "label": "Assurance",
+                  "slug": "insurance"
+                }
+              ]
+            }
+          ]
         },
         {
+          "id": 2,
+          "name": "Appartement de Janette",
+          "photo": "https://picsum.photos/300/200",
+          "address": "12 rue saint jean, 32159, Saint-Jean",
+          "etage": 2,
+          "loyer": 400,
+          "charges": 120,
+          "surface": 200,
+          "caution": 400,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "nbPiece": 4,
+          "ges": "A",
+          "energeticClass": "C",
+          "isFurnished": false,
+          "type": {
+            "id": 1,
+            "label": "Appartement"
+          },
+          "status": true,
+          "user": {
+            "id": 1,
+            "firstName": "John",
+            "email": "john.doe@gmail.com",
+            "phone": "0606060606",
+            "role": {
+              "id": 2,
+              "label": "Utilisateur"
+            },
+            "groups": [
+              {
+                "id": 1,
+                "name": "Le groupe de test",
+                "city": "Saint-Jean",
+                "accomodations": [
+                  {
+                    "id": 1,
+                    "name": "Appartement de Jean",
+                    "photo": "",
+                    "address": "11 rue saint jean, 32159, Saint-Jean",
+                    "etage": "2",
+                    "loyer": 245,
+                    "charges": 20,
+                    "surface": 70,
+                    "caution": 245,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 1
+                  },
+                  {
+                    "id": 2,
+                    "name": "Appartement de Janette",
+                    "photo": "",
+                    "address": "12 rue saint jean, 32159, Saint-Jean",
+                    "etage": "4",
+                    "loyer": 400,
+                    "charges": 120,
+                    "surface": 200,
+                    "caution": 400,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "groups": {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "https://picsum.photos/300/200",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "https://picsum.photos/300/200",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          },
+          "tenant": {
             "id": 2,
             "lastName": "Doe",
             "firstName": "Janette",
@@ -1471,82 +427,1264 @@
             "phone": "0707070707",
             "enterDate": "09/12/2012",
             "accomodationsId": [
-                2
+              2
             ]
-        }
-    ],
-    "rents": [
-        {
-            "id": 1,
-            "month": "Mars",
-            "isPayed": true,
-            "initialDate": "15/03/2022",
-            "amount": 265
+          },
+          "rents": [
+            {
+              "id": 2,
+              "month": "Mars",
+              "isPayed": false,
+              "initialDate": "03/02/2022",
+              "amount": 265
+            }
+          ]
         },
         {
-            "id": 2,
-            "month": "Mars",
-            "isPayed": false,
-            "initialDate": "15/03/2022",
-            "amount": 265
-        },
-        {
-            "id": 3,
-            "month": "Mars",
-            "isPayed": false,
-            "initialDate": "02/03/2022",
-            "amount": 265
-        }
-    ],
-    "documents": [
-        {
+          "id": 3,
+          "name": "Appartement de hanté",
+          "photo": "https://picsum.photos/300/200",
+          "address": "11 rue saint jean, 32159, Saint-Jean",
+          "etage": 0,
+          "loyer": 245,
+          "charges": 20,
+          "surface": 70,
+          "caution": 245,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "nbPiece": 3,
+          "ges": "N/A",
+          "energeticClass": "A",
+          "isFurnished": true,
+          "type": {
             "id": 1,
-            "name": "Document de test",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
-            "uploadDate": "12/12/2021",
-            "archive": false,
-            "tags": [
-                {
+            "label": "Appartement"
+          },
+          "status": false,
+          "user": {
+            "id": 1,
+            "firstName": "John",
+            "email": "john.doe@gmail.com",
+            "phone": "0606060606",
+            "role": {
+              "id": 2,
+              "label": "Utilisateur"
+            },
+            "groups": [
+              {
+                "id": 1,
+                "name": "Le groupe de test",
+                "city": "Saint-Jean",
+                "accomodations": [
+                  {
+                    "id": 1,
+                    "name": "Appartement de Jean",
+                    "photo": "",
+                    "address": "11 rue saint jean, 32159, Saint-Jean",
+                    "etage": "2",
+                    "loyer": 245,
+                    "charges": 20,
+                    "surface": 70,
+                    "caution": 245,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 1
+                  },
+                  {
                     "id": 2,
-                    "label": "Facture"
+                    "name": "Appartement de Janette",
+                    "photo": "",
+                    "address": "12 rue saint jean, 32159, Saint-Jean",
+                    "etage": "4",
+                    "loyer": 400,
+                    "charges": 120,
+                    "surface": 200,
+                    "caution": 400,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "groups": {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          },
+          "tenant": null,
+          "rents": [
+            {
+              "id": 3,
+              "month": "Mars",
+              "isPayed": false,
+              "initialDate": "02/03/2022",
+              "amount": 265
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Logements Rue Saint Raphaël",
+      "city": "Le Puy-En-Velay",
+      "accomodations": [
+        {
+          "id": 1,
+          "name": "Appartement de Didier",
+          "photo": "https://picsum.photos/300/200",
+          "address": "11 rue saint jean, 32159, Saint-Jean",
+          "etage": 1,
+          "loyer": 245,
+          "charges": 20,
+          "surface": 70,
+          "caution": 245,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "nbPiece": 2,
+          "ges": "B",
+          "energeticClass": "N/A",
+          "isFurnished": true,
+          "type": {
+            "id": 1,
+            "label": "Appartement"
+          },
+          "status": {
+            "id": 1,
+            "label": "Loué"
+          },
+          "user": {
+            "id": 1,
+            "firstName": "John",
+            "email": "john.doe@gmail.com",
+            "phone": "0606060606",
+            "role": {
+              "id": 2,
+              "label": "Utilisateur"
+            },
+            "groups": [
+              {
+                "id": 1,
+                "name": "Le groupe de test",
+                "city": "Saint-Jean",
+                "accomodations": [
+                  {
+                    "id": 1,
+                    "name": "Appartement de Jean",
+                    "photo": "",
+                    "address": "11 rue saint jean, 32159, Saint-Jean",
+                    "etage": "2",
+                    "loyer": 245,
+                    "charges": 20,
+                    "surface": 70,
+                    "caution": 245,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 1
+                  },
+                  {
+                    "id": 2,
+                    "name": "Appartement de Janette",
+                    "photo": "",
+                    "address": "12 rue saint jean, 32159, Saint-Jean",
+                    "etage": "4",
+                    "loyer": 400,
+                    "charges": 120,
+                    "surface": 200,
+                    "caution": 400,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "groups": {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "https://picsum.photos/300/200",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "https://picsum.photos/300/200",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          },
+          "tenant": {
+            "id": 1,
+            "lastName": "Doe",
+            "firstName": "Jean",
+            "email": "jeandoe@hotmail.com",
+            "phone": "0707070707",
+            "enterDate": "12/09/2021",
+            "accomodationsId": [
+              1
+            ]
+          },
+          "rents": [
+            {
+              "id": 3,
+              "month": "Mars",
+              "isPayed": false,
+              "initialDate": "15/03/2022",
+              "amount": 265
+            },
+            {
+              "id": 2,
+              "month": "Février",
+              "isPayed": true,
+              "initialDate": "15/02/2022",
+              "amount": 265
+            },
+            {
+              "id": 1,
+              "month": "Janvier",
+              "isPayed": false,
+              "initialDate": "15/01/2022",
+              "amount": 265
+            }
+          ],
+          "documents": [
+            {
+              "id": 1,
+              "name": "États des lieux",
+              "extention": "doc",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+              "uploadDate": "12/12/2021",
+              "archive": false,
+              "size": "200 KB",
+              "tags": [
+                {
+                  "id": 5,
+                  "label": "Bail",
+                  "slug": "lease"
                 },
                 {
-                    "id": 4,
-                    "label": "Assurance"
+                  "id": 4,
+                  "label": "Quittance",
+                  "slug": "receipt"
                 }
-            ]
-        }
-    ],
-    "tags": [
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Suivi-travaux",
+              "extention": "xls",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+              "uploadDate": "12/12/2021",
+              "archive": false,
+              "size": "200 KB",
+              "tags": [
+                {
+                  "id": 5,
+                  "label": "Bail",
+                  "slug": "lease"
+                },
+                {
+                  "id": 2,
+                  "label": "Assurance",
+                  "slug": "insurance"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Assurance",
+              "extention": "img",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+              "uploadDate": "12/12/2021",
+              "archive": true,
+              "size": "200 KB",
+              "tags": [
+                {
+                  "id": 1,
+                  "label": "tenant",
+                  "slug": "tenant"
+                },
+                {
+                  "id": 2,
+                  "label": "Assurance",
+                  "slug": "insurance"
+                }
+              ]
+            }
+          ]
+        },
         {
+          "id": 2,
+          "name": "Appartement vue sur église",
+          "photo": "https://picsum.photos/300/200",
+          "address": "12 rue saint jean, 32159, Saint-Jean",
+          "etage": 2,
+          "loyer": 400,
+          "charges": 120,
+          "surface": 200,
+          "caution": 400,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "nbPiece": 4,
+          "ges": "A",
+          "energeticClass": "C",
+          "isFurnished": false,
+          "type": {
             "id": 1,
-            "label": "tenant",
-            "slug": "tenant"
-        },
-        {
+            "label": "Appartement"
+          },
+          "status": true,
+          "user": {
+            "id": 1,
+            "firstName": "John",
+            "email": "john.doe@gmail.com",
+            "phone": "0606060606",
+            "role": {
+              "id": 2,
+              "label": "Utilisateur"
+            },
+            "groups": [
+              {
+                "id": 1,
+                "name": "Le groupe de test",
+                "city": "Saint-Jean",
+                "accomodations": [
+                  {
+                    "id": 1,
+                    "name": "Appartement de Jean",
+                    "photo": "",
+                    "address": "11 rue saint jean, 32159, Saint-Jean",
+                    "etage": "2",
+                    "loyer": 245,
+                    "charges": 20,
+                    "surface": 70,
+                    "caution": 245,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 1
+                  },
+                  {
+                    "id": 2,
+                    "name": "Appartement de Janette",
+                    "photo": "",
+                    "address": "12 rue saint jean, 32159, Saint-Jean",
+                    "etage": "4",
+                    "loyer": 400,
+                    "charges": 120,
+                    "surface": 200,
+                    "caution": 400,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "groups": {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "https://picsum.photos/300/200",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "https://picsum.photos/300/200",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          },
+          "tenant": {
             "id": 2,
-            "label": "Assurance",
-            "slug": "insurance"
+            "lastName": "Doe",
+            "firstName": "Janette",
+            "email": "janettedoe@wanadoo.com",
+            "phone": "0707070707",
+            "enterDate": "09/12/2012",
+            "accomodationsId": [
+              2
+            ]
+          },
+          "rents": [
+            {
+              "id": 2,
+              "month": "Mars",
+              "isPayed": false,
+              "initialDate": "03/02/2022",
+              "amount": 265
+            }
+          ]
         },
         {
-            "id": 3,
-            "label": "Caution",
-            "slug": "deposit"
-        },
-        {
-            "id": 4,
-            "label": "Quittance",
-            "slug": "receipt"
-        },
-        {
-            "id": 5,
-            "label": "Bail",
-            "slug": "lease"
-        },
-        {
-            "id": 6,
-            "label": "États des lieux",
-            "slug": "inventory_of_fixtures"
+          "id": 3,
+          "name": "Appartement de hanté",
+          "photo": "https://picsum.photos/300/200",
+          "address": "11 rue saint jean, 32159, Saint-Jean",
+          "etage": 0,
+          "loyer": 245,
+          "charges": 20,
+          "surface": 70,
+          "caution": 245,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "nbPiece": 3,
+          "ges": "N/A",
+          "energeticClass": "A",
+          "isFurnished": true,
+          "type": {
+            "id": 1,
+            "label": "Appartement"
+          },
+          "status": false,
+          "user": {
+            "id": 1,
+            "firstName": "John",
+            "email": "john.doe@gmail.com",
+            "phone": "0606060606",
+            "role": {
+              "id": 2,
+              "label": "Utilisateur"
+            },
+            "groups": [
+              {
+                "id": 1,
+                "name": "Le groupe de test",
+                "city": "Saint-Jean",
+                "accomodations": [
+                  {
+                    "id": 1,
+                    "name": "Appartement de Jean",
+                    "photo": "",
+                    "address": "11 rue saint jean, 32159, Saint-Jean",
+                    "etage": "2",
+                    "loyer": 245,
+                    "charges": 20,
+                    "surface": 70,
+                    "caution": 245,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 1
+                  },
+                  {
+                    "id": 2,
+                    "name": "Appartement de Janette",
+                    "photo": "",
+                    "address": "12 rue saint jean, 32159, Saint-Jean",
+                    "etage": "4",
+                    "loyer": 400,
+                    "charges": 120,
+                    "surface": 200,
+                    "caution": 400,
+                    "typeId": 1,
+                    "status": true,
+                    "userId": 1,
+                    "groupsId": 1,
+                    "tenantId": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "groups": {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          },
+          "tenant": null,
+          "rents": [
+            {
+              "id": 3,
+              "month": "Mars",
+              "isPayed": false,
+              "initialDate": "02/03/2022",
+              "amount": 265
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ],
+  "accomodations": [
+    {
+      "id": 1,
+      "name": "Appartement de Jean",
+      "photo": "https://picsum.photos/300/200",
+      "address": "11 rue saint jean, 32159, Saint-Jean",
+      "etage": 1,
+      "loyer": 245,
+      "charges": 20,
+      "surface": 70,
+      "caution": 245,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+      "nbPiece": 2,
+      "ges": "B",
+      "energeticClass": "N/A",
+      "isFurnished": true,
+      "type": {
+        "id": 1,
+        "label": "Appartement"
+      },
+      "status": {
+        "id": 1,
+        "label": "Loué"
+      },
+      "user": {
+        "id": 1,
+        "firstName": "John",
+        "email": "john.doe@gmail.com",
+        "phone": "0606060606",
+        "role": {
+          "id": 2,
+          "label": "Utilisateur"
+        },
+        "groups": [
+          {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          }
+        ]
+      },
+      "groups": {
+        "id": 1,
+        "name": "Le groupe de test",
+        "city": "Saint-Jean",
+        "accomodations": [
+          {
+            "id": 1,
+            "name": "Appartement de Jean",
+            "photo": "https://picsum.photos/300/200",
+            "address": "11 rue saint jean, 32159, Saint-Jean",
+            "etage": "2",
+            "loyer": 245,
+            "charges": 20,
+            "surface": 70,
+            "caution": 245,
+            "typeId": 1,
+            "status": true,
+            "userId": 1,
+            "groupsId": 1,
+            "tenantId": 1
+          },
+          {
+            "id": 2,
+            "name": "Appartement de Janette",
+            "photo": "https://picsum.photos/300/200",
+            "address": "12 rue saint jean, 32159, Saint-Jean",
+            "etage": "4",
+            "loyer": 400,
+            "charges": 120,
+            "surface": 200,
+            "caution": 400,
+            "typeId": 1,
+            "status": true,
+            "userId": 1,
+            "groupsId": 1,
+            "tenantId": 2
+          }
+        ]
+      },
+      "tenant": {
+        "id": 1,
+        "lastName": "Doe",
+        "firstName": "Jean",
+        "email": "jeandoe@hotmail.com",
+        "phone": "0707070707",
+        "enterDate": "12/09/2021",
+        "accomodationsId": [
+          1
+        ]
+      },
+      "rents": [
+        {
+          "id": 3,
+          "month": "Mars",
+          "isPayed": false,
+          "initialDate": "15/03/2022",
+          "amount": 265
+        },
+        {
+          "id": 2,
+          "month": "Février",
+          "isPayed": false,
+          "initialDate": "15/02/2022",
+          "amount": 265
+        },
+        {
+          "id": 1,
+          "month": "Janvier",
+          "isPayed": true,
+          "initialDate": "15/01/2022",
+          "amount": 265
+        }
+      ],
+      "documents": [
+        {
+          "id": 1,
+          "name": "États des lieux",
+          "extention": "doc",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "uploadDate": "12/12/2021",
+          "archive": false,
+          "size": "200 KB",
+          "tags": [
+            {
+              "id": 5,
+              "label": "Bail",
+              "slug": "lease"
+            },
+            {
+              "id": 4,
+              "label": "Quittance",
+              "slug": "receipt"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Suivi-travaux",
+          "extention": "xls",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "uploadDate": "12/12/2021",
+          "archive": false,
+          "size": "200 KB",
+          "tags": [
+            {
+              "id": 5,
+              "label": "Bail",
+              "slug": "lease"
+            },
+            {
+              "id": 2,
+              "label": "Assurance",
+              "slug": "insurance"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Assurance",
+          "extention": "img",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+          "uploadDate": "12/12/2021",
+          "archive": true,
+          "size": "200 KB",
+          "tags": [
+            {
+              "id": 1,
+              "label": "tenant",
+              "slug": "tenant"
+            },
+            {
+              "id": 2,
+              "label": "Assurance",
+              "slug": "insurance"
+            }
+          ]
+        }
+      ],
+      "history": [
+        {
+          "id": 1,
+          "accomodations": {
+            "id": 1
+          },
+          "tenant": null,
+          "startDate": "15/03/2022",
+          "endDate": "20/03/2022",
+          "historyType": {
+            "id": 2,
+            "label": "Travaux"
+          },
+          "description": "Rénovation du plafond suite a un dégats des eaux"
+        },
+        {
+          "id": 2,
+          "accomodations": {
+            "id": 1
+          },
+          "tenant": {
+            "id": 1,
+            "lastName": "Doe",
+            "firstName": "Jean",
+            "email": "jeandoe@hotmail.com",
+            "phone": "0707070707",
+            "enterDate": "12/09/2021",
+            "accomodationsId": [
+              1
+            ]
+          },
+          "startDate": "15/03/2022",
+          "endDate": null,
+          "historyType": {
+            "id": 1,
+            "label": "Locataire"
+          },
+          "description": "Arriver du nouveau locataire."
+        },
+        {
+          "id": 3,
+          "accomodations": {
+            "id": 1
+          },
+          "tenant": null,
+          "startDate": "15/03/2022",
+          "endDate": null,
+          "historyType": {
+            "id": 2,
+            "label": "Travaux"
+          },
+          "description": "Rénovation du plafond suite a un dégats des eaux"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Appartement de Janette",
+      "photo": "https://picsum.photos/300/200",
+      "address": "12 rue saint jean, 32159, Saint-Jean",
+      "etage": 2,
+      "loyer": 400,
+      "charges": 120,
+      "surface": 200,
+      "caution": 400,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+      "nbPiece": 4,
+      "ges": "A",
+      "energeticClass": "C",
+      "isFurnished": false,
+      "type": {
+        "id": 1,
+        "label": "Appartement"
+      },
+      "status": true,
+      "user": {
+        "id": 1,
+        "firstName": "John",
+        "email": "john.doe@gmail.com",
+        "phone": "0606060606",
+        "role": {
+          "id": 2,
+          "label": "Utilisateur"
+        },
+        "groups": [
+          {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          }
+        ]
+      },
+      "groups": {
+        "id": 1,
+        "name": "Le groupe de test",
+        "city": "Saint-Jean",
+        "accomodations": [
+          {
+            "id": 1,
+            "name": "Appartement de Jean",
+            "photo": "https://picsum.photos/300/200",
+            "address": "11 rue saint jean, 32159, Saint-Jean",
+            "etage": "2",
+            "loyer": 245,
+            "charges": 20,
+            "surface": 70,
+            "caution": 245,
+            "typeId": 1,
+            "status": true,
+            "userId": 1,
+            "groupsId": 1,
+            "tenantId": 1
+          },
+          {
+            "id": 2,
+            "name": "Appartement de Janette",
+            "photo": "https://picsum.photos/300/200",
+            "address": "12 rue saint jean, 32159, Saint-Jean",
+            "etage": "4",
+            "loyer": 400,
+            "charges": 120,
+            "surface": 200,
+            "caution": 400,
+            "typeId": 1,
+            "status": true,
+            "userId": 1,
+            "groupsId": 1,
+            "tenantId": 2
+          }
+        ]
+      },
+      "tenant": {
+        "id": 2,
+        "lastName": "Doe",
+        "firstName": "Janette",
+        "email": "janettedoe@wanadoo.com",
+        "phone": "0707070707",
+        "enterDate": "09/12/2012",
+        "accomodationsId": [
+          2
+        ]
+      },
+      "rents": [
+        {
+          "id": 5,
+          "month": "Mars",
+          "isPayed": false,
+          "initialDate": "03/02/2022",
+          "amount": 265
+        }
+      ],
+      "history": []
+    },
+    {
+      "id": 3,
+      "name": "Appartement de hanté",
+      "photo": "https://picsum.photos/300/200",
+      "address": "11 rue saint jean, 32159, Saint-Jean",
+      "etage": 0,
+      "loyer": 245,
+      "charges": 20,
+      "surface": 70,
+      "caution": 245,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+      "nbPiece": 3,
+      "ges": "N/A",
+      "energeticClass": "A",
+      "isFurnished": true,
+      "type": {
+        "id": 1,
+        "label": "Appartement"
+      },
+      "status": false,
+      "user": {
+        "id": 1,
+        "firstName": "John",
+        "email": "john.doe@gmail.com",
+        "phone": "0606060606",
+        "role": {
+          "id": 2,
+          "label": "Utilisateur"
+        },
+        "groups": [
+          {
+            "id": 1,
+            "name": "Le groupe de test",
+            "city": "Saint-Jean",
+            "accomodations": [
+              {
+                "id": 1,
+                "name": "Appartement de Jean",
+                "photo": "",
+                "address": "11 rue saint jean, 32159, Saint-Jean",
+                "etage": "2",
+                "loyer": 245,
+                "charges": 20,
+                "surface": 70,
+                "caution": 245,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 1
+              },
+              {
+                "id": 2,
+                "name": "Appartement de Janette",
+                "photo": "",
+                "address": "12 rue saint jean, 32159, Saint-Jean",
+                "etage": "4",
+                "loyer": 400,
+                "charges": 120,
+                "surface": 200,
+                "caution": 400,
+                "typeId": 1,
+                "status": true,
+                "userId": 1,
+                "groupsId": 1,
+                "tenantId": 2
+              }
+            ]
+          }
+        ]
+      },
+      "groups": {
+        "id": 1,
+        "name": "Le groupe de test",
+        "city": "Saint-Jean",
+        "accomodations": [
+          {
+            "id": 1,
+            "name": "Appartement de Jean",
+            "photo": "",
+            "address": "11 rue saint jean, 32159, Saint-Jean",
+            "etage": "2",
+            "loyer": 245,
+            "charges": 20,
+            "surface": 70,
+            "caution": 245,
+            "typeId": 1,
+            "status": true,
+            "userId": 1,
+            "groupsId": 1,
+            "tenantId": 1
+          },
+          {
+            "id": 2,
+            "name": "Appartement de Janette",
+            "photo": "",
+            "address": "12 rue saint jean, 32159, Saint-Jean",
+            "etage": "4",
+            "loyer": 400,
+            "charges": 120,
+            "surface": 200,
+            "caution": 400,
+            "typeId": 1,
+            "status": true,
+            "userId": 1,
+            "groupsId": 1,
+            "tenantId": 2
+          }
+        ]
+      },
+      "tenant": null,
+      "rents": [
+        {
+          "id": 6,
+          "month": "Mars",
+          "isPayed": false,
+          "initialDate": "02/03/2022",
+          "amount": 265
+        }
+      ],
+      "history": []
+    }
+  ],
+  "tenants": [
+    {
+      "id": 1,
+      "lastName": "Doe",
+      "firstName": "Jean",
+      "email": "jeandoe@hotmail.com",
+      "phone": "0707070707",
+      "enterDate": "12/09/2021",
+      "accomodationsId": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "lastName": "Doe",
+      "firstName": "Janette",
+      "email": "janettedoe@wanadoo.com",
+      "phone": "0707070707",
+      "enterDate": "09/12/2012",
+      "accomodationsId": [
+        2
+      ]
+    }
+  ],
+  "rents": [
+    {
+      "id": 1,
+      "month": "Janvier",
+      "isPayed": true,
+      "initialDate": "15/01/2022",
+      "amount": 265
+    },
+    {
+      "id": 2,
+      "month": "Février",
+      "isPayed": false,
+      "initialDate": "15/02/2022",
+      "amount": 265
+    },
+    {
+      "id": 3,
+      "month": "Mars",
+      "isPayed": false,
+      "initialDate": "15/03/2022",
+      "amount": 265
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "name": "Document de test",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+      "uploadDate": "12/12/2021",
+      "archive": false,
+      "tags": [
+        {
+          "id": 2,
+          "label": "Facture"
+        },
+        {
+          "id": 4,
+          "label": "Assurance"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "label": "Locataire",
+      "slug": "tenant"
+    },
+    {
+      "id": 2,
+      "label": "Assurance",
+      "slug": "insurance"
+    },
+    {
+      "id": 3,
+      "label": "Caution",
+      "slug": "deposit"
+    },
+    {
+      "id": 4,
+      "label": "Quittance",
+      "slug": "receipt"
+    },
+    {
+      "id": 5,
+      "label": "Bail",
+      "slug": "lease"
+    },
+    {
+      "id": 6,
+      "label": "États des lieux",
+      "slug": "inventory_of_fixtures"
+    }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "accomodations": {
+        "id": 1
+      },
+      "tenant": null,
+      "startDate": "15/03/2022",
+      "endDate": "20/03/2022",
+      "historyType": {
+        "id": 2
+      },
+      "description": "Rénovation du plafond suite a un dégats des eaux."
+    },
+    {
+      "id": 2,
+      "accomodations": {
+        "id": 1
+      },
+      "tenant": {
+        "id": 1
+      },
+      "startDate": "15/03/2022",
+      "endDate": null,
+      "historyType": {
+        "id": 1
+      },
+      "description": "Arriver du nouveau locataire."
+    }
+  ]
 }

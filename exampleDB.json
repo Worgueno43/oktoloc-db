@@ -1,0 +1,517 @@
+{
+    "roles": [
+        {
+            "id": 1,
+            "label": "Administrateur"
+        },
+        {
+            "id": 2,
+            "label": "Utilisateur"
+        }
+    ],
+    "accomodationTypes": [
+        {
+            "id": 1,
+            "label": "Appartement"
+        },
+        {
+            "id": 2,
+            "label": "Maison"
+        },
+        {
+            "id": 3,
+            "label": "Garage"
+        },
+        {
+            "id": 4,
+            "label": "Commerce"
+        }
+    ],
+    "historyTypes": [
+        {
+            "id": 1,
+            "label": "Locataire"
+        },
+        {
+            "id": 2,
+            "label": "Travaux"
+        }
+    ],
+    "tags": [
+        {
+            "id": 1,
+            "label": "Locataire",
+            "slug": "tenant"
+        },
+        {
+            "id": 2,
+            "label": "Assurance",
+            "slug": "insurance"
+        },
+        {
+            "id": 3,
+            "label": "Caution",
+            "slug": "deposit"
+        },
+        {
+            "id": 4,
+            "label": "Quittance",
+            "slug": "receipt"
+        },
+        {
+            "id": 5,
+            "label": "Bail",
+            "slug": "lease"
+        },
+        {
+            "id": 6,
+            "label": "États des lieux",
+            "slug": "inventory_of_fixtures"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "firstName": "John",
+            "email": "john.doe@gmail.com",
+            "phone": "06 06 06 06 06",
+            "role": {
+                "id": 2
+            },
+            "groups": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 2
+                },
+                {
+                    "id": 3
+                }
+            ]
+        }
+    ],
+    "groups": [
+        {
+            "id": 1,
+            "name": "Immeuble Rue Saint Jacques",
+            "city": "Le Puy-En-Velay",
+            "accomodations": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 2
+                },
+                {
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Appartements vielle ville",
+            "city": "Le Puy-En-Velay",
+            "accomodations": [
+                {
+                    "id": 4
+                },
+                {
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Autres logements",
+            "city": "Le Puy-En-Velay",
+            "accomodations": [
+                {
+                    "id": 6
+                }
+            ]
+        }
+    ],
+    "accomodations": [
+        {
+            "id": 1,
+            "name": "Appartement de Jean",
+            "photo": "https://picsum.photos/300/200",
+            "address": "11 rue saint jacques, 43000, Le Puy-en-Velay",
+            "floor": 1,
+            "rent": 245,
+            "expenses": 20,
+            "surface": 70,
+            "deposit": 245,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "numberPieces": 2,
+            "ges": "B",
+            "energeticClass": "N/A",
+            "isFurnished": true,
+            "accomodationType": {
+                "id": 1
+            },
+            "status": true,
+            "user": {
+                "id": 1
+            },
+            "groups": [
+                {
+                    "id": 1
+                }
+            ],
+            "tenant": {
+                "id": 1
+            },
+            "rents": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 2
+                },
+                {
+                    "id": 3
+                }
+            ],
+            "documents": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 2
+                },
+                {
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Appartement de Janette",
+            "photo": "https://picsum.photos/300/200",
+            "address": "12 rue saint jean, 32159, Saint-Jean",
+            "etage": 2,
+            "rent": 400,
+            "expenses": 120,
+            "surface": 200,
+            "deposit": 400,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "numberPieces": 4,
+            "ges": "A",
+            "energeticClass": "C",
+            "isFurnished": false,
+            "accomodationType": {
+                "id": 1
+            },
+            "status": true,
+            "user": {
+                "id": 1
+            },
+            "groups": {
+                "id": 1
+            },
+            "tenant": {
+                "id": 2
+            },
+            "rents": [
+                {
+                    "id": 4
+                },
+                {
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Appartement de hanté",
+            "photo": "https://picsum.photos/300/200",
+            "address": "11 rue saint jean, 32159, Saint-Jean",
+            "etage": 0,
+            "rent": 245,
+            "expenses": 20,
+            "surface": 70,
+            "deposit": 245,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "numberPieces": 3,
+            "ges": "N/A",
+            "energeticClass": "A",
+            "isFurnished": true,
+            "accomodationType": {
+                "id": 1
+            },
+            "status": false,
+            "user": {
+                "id": 1
+            },
+            "groups": {
+                "id": 1
+            },
+            "tenant": null,
+            "rents": [
+                {
+                    "id": 6
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Appartement XIXè siècle",
+            "photo": "https://picsum.photos/300/200",
+            "address": "11 rue raphaël, 43000, Le Puy-en-Velay",
+            "floor": 1,
+            "rent": 245,
+            "expenses": 20,
+            "surface": 70,
+            "deposit": 245,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "numberPieces": 2,
+            "ges": "B",
+            "energeticClass": "N/A",
+            "isFurnished": true,
+            "accomodationType": {
+                "id": 1
+            },
+            "status": true,
+            "user": {
+                "id": 1
+            },
+            "groups": [
+                {
+                    "id": 2
+                }
+            ],
+            "tenant": {
+                "id": 4
+            },
+            "rents": [],
+            "documents": []
+        },
+        {
+            "id": 5,
+            "name": "Appartement vue sur cloître",
+            "photo": "https://picsum.photos/300/200",
+            "address": "12 rue du cloître, 43000, Le Puy-en-Velay",
+            "etage": 2,
+            "rent": 400,
+            "expenses": 120,
+            "surface": 200,
+            "deposit": 400,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "numberPieces": 4,
+            "ges": "A",
+            "energeticClass": "C",
+            "isFurnished": false,
+            "accomodationType": {
+                "id": 1
+            },
+            "status": false,
+            "user": {
+                "id": 1
+            },
+            "groups": {
+                "id": 2
+            },
+            "tenant": null,
+            "rents": []
+        },
+        {
+            "id": 6,
+            "name": "Maison de bourg",
+            "photo": "https://picsum.photos/300/200",
+            "address": "22 Rue Cardinal de Polignac, 43000, Le Puy-en-Velay",
+            "etage": 2,
+            "rent": 400,
+            "expenses": 120,
+            "surface": 200,
+            "deposit": 400,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "numberPieces": 4,
+            "ges": "A",
+            "energeticClass": "C",
+            "isFurnished": false,
+            "accomodationType": {
+                "id": 2
+            },
+            "status": false,
+            "user": {
+                "id": 1
+            },
+            "groups": {
+                "id": 3
+            },
+            "tenant": null,
+            "rents": []
+        }
+    ],
+    "tenants": [
+        {
+            "id": 1,
+            "lastName": "Doe",
+            "firstName": "Jean",
+            "email": "jeandoe@hotmail.com",
+            "phone": "07 07 07 07 07",
+            "enterDate": "12/09/2021",
+            "accomodationsId": [
+                1
+            ]
+        },
+        {
+            "id": 2,
+            "lastName": "Doe",
+            "firstName": "Janette",
+            "email": "janettedoe@wanadoo.com",
+            "phone": "06 06 06 06 06",
+            "enterDate": "09/12/2012",
+            "accomodationsId": [
+                2
+            ]
+        },
+        {
+            "id": 3,
+            "lastName": "Erik",
+            "firstName": "John",
+            "email": "john-erik@gmail.com",
+            "phone": "06 06 06 06 06",
+            "enterDate": "09/03/2022",
+            "accomodationsId": [
+                4
+            ]
+        }
+    ],
+    "rents": [
+        {
+            "id": 1,
+            "month": "Janvier",
+            "isPayed": true,
+            "initialDate": "15/01/2022",
+            "amount": 265,
+            "accomodationId": 1
+        },
+        {
+            "id": 2,
+            "month": "Février",
+            "isPayed": false,
+            "initialDate": "15/02/2022",
+            "amount": 265,
+            "accomodationId": 1
+        },
+        {
+            "id": 3,
+            "month": "Mars",
+            "isPayed": false,
+            "initialDate": "15/03/2022",
+            "amount": 265,
+            "accomodationId": 1
+        },
+        {
+            "id": 4,
+            "month": "Mars",
+            "isPayed": false,
+            "initialDate": "15/03/2022",
+            "amount": 265,
+            "accomodationId": 2
+        },
+        {
+            "id": 5,
+            "month": "Février",
+            "isPayed": true,
+            "initialDate": "15/03/2022",
+            "amount": 265,
+            "accomodationId": 2
+        },
+        {
+            "id": 6,
+            "month": "Décembre",
+            "isPayed": true,
+            "initialDate": "15/12/2021",
+            "amount": 265,
+            "accomodationId": 3
+        }
+    ],
+    "documents": [
+        {
+            "id": 1,
+            "name": "États des lieux",
+            "extention": "doc",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "uploadDate": "12/12/2021",
+            "archive": false,
+            "size": "200 KB",
+            "tags": [
+                {
+                    "id": 5
+                },
+                {
+                    "id": 4
+                }
+            ],
+            "accomodationId": 1
+        },
+        {
+            "id": 2,
+            "name": "Suivi-travaux",
+            "extention": "xls",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "uploadDate": "12/12/2021",
+            "archive": false,
+            "size": "200 KB",
+            "tags": [
+                {
+                    "id": 5
+                },
+                {
+                    "id": 2
+                }
+            ],
+            "accomodationId": 1
+        },
+        {
+            "id": 3,
+            "name": "Assurance",
+            "extention": "img",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ultricies tellus, eget maximus libero. Quisque vel massa fringilla, hendrerit tellus nec, sagittis nisi. Suspendisse faucibus faucibus ultricies. Mauris dapibus vulputate euismod. Aenean maximus ante ut ipsum sagittis ornare. Pellentesque gravida venenatis dignissim. Maecenas vitae diam tincidunt, tristique felis ac, luctus nisl. Vestibulum ut ligula tempus, hendrerit mauris non, luctus mi. Fusce tincidunt viverra augue, nec rutrum dolor cursus vel. Integer accumsan lectus ac ante mattis maximus. Quisque dictum consectetur imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla et sagittis erat. Phasellus malesuada sem enim, ut consectetur arcu pulvinar ac. Nam sed turpis eu felis convallis volutpat.",
+            "uploadDate": "12/12/2021",
+            "archive": true,
+            "size": "200 KB",
+            "tags": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 2
+                }
+            ],
+            "accomodationId": 1
+        }
+    ],
+    "history": [
+        {
+            "accomodations": {
+                "id": 1
+            },
+            "tenant": null,
+            "startDate": "15/03/2022",
+            "endDate": "20/03/2022",
+            "historyType": {
+                "id": 2
+            },
+            "description": "Rénovation du plafond suite a un dégats des eaux."
+        },
+        {
+            "accomodations": {
+                "id": 1
+            },
+            "tenant": {
+                "id": 1
+            },
+            "startDate": "20/11/2019",
+            "endDate": null,
+            "historyType": {
+                "id": 1
+            },
+            "description": "Arriver du nouveau locataire."
+        }
+    ]
+}
