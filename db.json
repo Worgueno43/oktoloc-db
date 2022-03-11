@@ -41,6 +41,8 @@
     {
       "id": 1,
       "firstName": "John",
+      "lastName": "Doe",
+      "password": "JohnDoe",
       "email": "john.doe@gmail.com",
       "phone": "0606060606",
       "role": {
@@ -1041,7 +1043,7 @@
       "id": 1,
       "name": "Appartement de Jean",
       "photo": "https://picsum.photos/300/200",
-      "address": "11 rue saint jean, 32159, Saint-Jean",
+      "address": "4 rue du Pensio Nd de France, 43000, Le Puy-en-Velay",
       "etage": 1,
       "loyer": 245,
       "charges": 20,
